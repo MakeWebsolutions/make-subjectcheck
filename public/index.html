@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nyhetsbrev: Test emnefeltet</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container" style="margin-bottom: 60px;">
+		<h2 class="text-center">Test emnefeltet</h2>
+		<div class="row emailrow">
+			<form id="ai">
+				<div class="form-group clearfix">
+					<small class="pull-right date">13:12</small>
+					<div class="col-md-12">
+						<h4 style="margin-bottom: 10px;"><i class="fa fa-paperclip" aria-hidden="true"></i>&nbsp;Din avsender &lt;avsender@domene.no&gt;</h4>
+					</div>
+					<div class="col-md-10" style="padding-left: 35px;padding-bottom: 5px;">
+						<input type="text" class="form-control" id="subject" placeholder="Emnefeltet du ønsker å teste" name="subject" />
+					</div>
+					<div class="col-md-2">
+						<input type="submit" class="btn btn-success btn-block" value="Test">
+					</div>
+				</div>
+				<div class="col-md-12">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Preheader vil vises her. Den fungerer som et ekstra emnefelt som du bør benytte deg av.</small>
+				</div>
+				<div class="form-group" style="margin-top: 10px;">
+					<div class="col-md-12">
+						<div class="remarks"></div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="row emailrow">
+			<div class="green">
+				<span class="text-success text-right">Denne er<br/>formulert bra.</span>
+				<i class="fa fa-arrow-right text-success" aria-hidden="true"></i>
+			</div>
+			<div class="form-group clearfix">
+				<small class="pull-right date">07:22</small>
+				<div class="col-md-12" style="padding-top:10px;">
+					<strong><i class="fa fa-share" aria-hidden="true"></i>&nbsp;Eiendomsmeglern &lt;nyhetsbrev@eiendomsmeglern.no&gt;</strong>
+				</div>
+				<div class="col-md-12">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dette må du tenke på før du skal selge eller bytte bolig
+				</div>
+				<div class="col-md-12">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Ca 80% flytter flere ganger iløpet av livet. Vi har samlet alle tipsene for deg.</small>
+				</div>
+			</div>
+		</div>
+		<div class="row emailrow">
+			<div class="red">
+				<i class="fa fa-arrow-left text-danger" aria-hidden="true"></i>
+				<span class="text-danger text-left">Denne kan oppfattes<br/>som spam.</span>
+			</div>
+			<div class="form-group clearfix">
+				<small class="pull-right date">07:22</small>
+				<div class="col-md-12" style="padding-top:10px;">
+					<strong><i class="fa fa-share" aria-hidden="true"></i>&nbsp;Eiendomsmeglern &lt;nyhetsbrev@eiendomsmeglern.no&gt;</strong>
+				</div>
+				<div class="col-md-12">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Re: Vi har 20% *RABATT* på våre tjenester i juni!!
+				</div>
+				<div class="col-md-12">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Dette er et ekstremt bra tilbud som sparer deg for 10.000 kr.</small>
+				</div>
+			</div>
+		</div>
+		<div class="row info">
+			<div class="col-md-6">
+				<h4><i class="fa fa-thumbs-o-up"></i>&nbsp;Hvordan emne bør formuleres</h4>
+				<ul>
+					<li>Vær kort og presis. Tenk at nyhetsbrevet sannsynligvis åpnes på mobil.</li>
+					<li>Inkluder gjerne en en oppfordring til handling (call to action).</li>
+					<li>Bruk preheader som et ekstra emnefelt.</li>
+					<li>Prøv å formidle en følelse av hastverk.</li>
+					<li>Referanse til lokasjon hvis mulig.</li>
+					<li>Bruk spørsmålsform ved anledning.</li>
+					<li>Emojis gjør foreløpig emnefelet friskere og kan gi høyere åpningsrate.</li>
+					<li>Test nyhetsbrevet i f.eks mail-tester.com.</li>
+					<li>Bruk emnefeltet til å fortelle, ikke selge.</li>
+					<li>Emnefeltet skal gjenspeile hva nyhetsbrevet omhandler.</li>
+				</ul>
+			</div>
+			<div class="col-md-6 donts">
+				<h4><i class="fa fa-warning"></i>&nbsp;Hva bør du unngå</h4>
+				<ul>
+					<li>IKKE BRUK STORE BOKSTAVER</li>
+					<li>Unngå utropstegn!</li>
+					<li>Unngå firmanavn. Det bør komme frem fra avsenderen.</li>
+					<li>Unngå spesialtegn som ^,*,@ etc.</li>
+					<li>Ikke lat som om du er en sikker kilde ved å bruke re: eller fwd:</li>
+					<li>Unngå tekster som test eller lorem ipsum.</li>
+					<li>Unngå spamete fraser som kjøp, gratis, kontant, gavekort etc.</li>
+					<li>Unngå bruk av adjektiver som ekstremt, super, eksklusivt etc.</li>
+					<li>Ord som abonnement, forfall, påminnelse gir dårligere åpningsrate.</li>
+					<li>Unngå bruk av tall, særlig beløp og prosentvise rabatter.</li>
+					<li>Unngå å spørre om hjelp. Det kan fort bli assosiert med svindel.</li>
+				</ul>
+			</div>
+		</div>
+		<!--<div class="row">
+			<form id="av">
+  			<div class="form-group">
+					<div class="col-md-12">
+						<h4>Test domene du sender fra</h4>
+					</div>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="sender" placeholder="domene.no" name="sender" />
+					</div>
+					<div class="col-md-2">
+						<input type="submit" class="btn btn-info btn-block" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>-->
+		<div class="row" style="margin-top: 20px;">
+			<strong>Api: [POST] "/" => { "subject": "string" } => response { "result": "[array]" }</strong>
+		</div>
+	</div>
+
+	
+
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

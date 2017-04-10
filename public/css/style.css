@@ -1,0 +1,102 @@
+body {
+	background: #f1f1f1;
+	padding-top: 60px;
+	font-weight: 200;
+}
+
+h2 {
+	font-weight: 300;
+}
+
+h4 {
+	margin-bottom: 0;
+	font-weight: 300;
+}
+
+small {
+	font-size: 14px;
+	color: #aaa;
+}
+
+.container {
+	width: 960px;
+}
+
+.form-group {
+	margin-bottom: 0;
+}
+
+.info {
+	background: #007c2b;
+	padding: 10px;
+}
+
+.info h4,
+.info ul li {
+	color: #fff;
+}
+
+.info h4 {
+	margin-bottom: 10px;
+}
+
+.donts { 
+	background: #fcc900;
+}
+
+.donts h4,
+.donts ul li {
+	color: #333;
+}
+
+.remarks {
+	margin-top: 10px;
+	padding-left: 20px;
+}
+
+.emailrow {
+	background: #fff;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #e5e5e5;
+	position:relative;
+}
+
+.date {
+	padding: 10px;
+	position:absolute;
+	top: 2px;
+	right: 10px;
+	color: #aaa;
+}
+
+.green {
+	position:absolute;
+	left: -140px;
+	top: 30px;
+	font-size: 18px;
+	transform: rotate(-15deg);
+}
+
+.red {
+	position:absolute;
+	right: -195px;
+	top: 35px;
+	font-size: 18px;
+	transform: rotate(15deg);
+}
+
+.alert {
+	padding: 8px 10px;
+	margin-bottom: 10px;
+	position:relative;
+}
+
+.alert-danger .word,
+.alert-warning .word,
+.alert-success .word,
+.alert-info .word
+ {
+	display:inline-block;
+	padding: 2px 8px;
+	margin-right: 5px;
+}
