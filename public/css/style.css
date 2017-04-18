@@ -85,6 +85,14 @@ small {
 	transform: rotate(15deg);
 }
 
+.yellow-highlight {
+  text-shadow: 
+    -3px 0 3px yellow,
+     3px 0 3px yellow,
+     6px 0 6px yellow,
+    -6px 0 6px yellow;
+}
+
 .alert {
 	padding: 8px 10px;
 	margin-bottom: 10px;
