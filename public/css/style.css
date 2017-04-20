@@ -87,10 +87,10 @@ small {
 
 .yellow-highlight {
   text-shadow: 
-    -3px 0 3px yellow,
-     3px 0 3px yellow,
-     6px 0 6px yellow,
-    -6px 0 6px yellow;
+    -13px 0 3px yellow,
+     13px 0 3px yellow,
+     16px 0 6px yellow,
+    -16px 0 6px yellow;
 }
 
 .alert {
