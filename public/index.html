@@ -2,76 +2,77 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Nyhetsbrev: Test emnefeltet</title>
+	<title>Sende nyhetsbrev? Test emnefeltet</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<div class="container" style="margin-bottom: 60px;">
-		<h2 class="text-center">Test emnefeltet</h2>
+		<h2 class="text-center">Test emnefeltet for ditt nyhestbrev</h2>
 		<div class="row emailrow">
 			<form id="ai">
 				<div class="form-group clearfix">
 					<small class="pull-right date">13:12</small>
-					<div class="col-md-12">
+					<div class="col-sm-12">
 						<h4 style="margin-bottom: 10px;"><i class="fa fa-paperclip" aria-hidden="true"></i>&nbsp;Din avsender &lt;avsender@domene.no&gt;</h4>
 					</div>
-					<div class="col-md-10" style="padding-left: 35px;padding-bottom: 5px;">
-						<input type="text" class="form-control" id="subject" placeholder="Emnefeltet du ønsker å teste" name="subject" />
+					<div class="col-sm-10">
+						<input type="text" class="form-control subject" id="subject" placeholder="Emnefeltet du ønsker å teste" name="subject" />
 					</div>
-					<div class="col-md-2">
+					<div class="col-sm-2">
 						<input type="submit" class="btn btn-success btn-block" value="Test">
 					</div>
 				</div>
-				<div class="col-md-12">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Preheader vil vises her. Den fungerer som et ekstra emnefelt som du bør benytte deg av.</small>
+				<div class="col-sm-10">
+					<small class="preheader">Preheader vil vises her. Den fungerer som et ekstra emnefelt som du bør benytte deg av.</small>
 				</div>
 				<div class="form-group" style="margin-top: 10px;">
-					<div class="col-md-12">
+					<div class="col-sm-12">
 						<div class="remarks"></div>
 					</div>
 				</div>
 			</form>
 		</div>
 		<div class="row emailrow">
-			<div class="green">
+			<div class="green hidden-sm">
 				<span class="text-success text-right">Denne er<br/>formulert bra.</span>
 				<i class="fa fa-arrow-right text-success" aria-hidden="true"></i>
 			</div>
 			<div class="form-group clearfix">
 				<small class="pull-right date">07:22</small>
-				<div class="col-md-12" style="padding-top:10px;">
+				<div class="col-sm-12" style="padding-top:10px;">
 					<strong><i class="fa fa-share" aria-hidden="true"></i>&nbsp;Eiendomsmeglern &lt;nyhetsbrev@eiendomsmeglern.no&gt;</strong>
 				</div>
-				<div class="col-md-12">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow-highlight">Dette må du tenke på før du skal selge eller bytte bolig</span>
+				<div class="col-sm-10">
+					<span class="yellow-highlight">Dette må du tenke på før du skal selge eller bytte bolig</span>
 				</div>
-				<div class="col-md-12">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Ca 80% flytter flere ganger iløpet av livet. Vi har samlet alle tipsene for deg.</small>
+				<div class="col-sm-10">
+					<small>Ca 80% flytter flere ganger iløpet av livet. Vi har samlet alle tipsene for deg.</small>
 				</div>
 			</div>
 		</div>
 		<div class="row emailrow">
-			<div class="red">
+			<div class="red hidden-sm">
 				<i class="fa fa-arrow-left text-danger" aria-hidden="true"></i>
 				<span class="text-danger text-left">Denne kan oppfattes<br/>som spam.</span>
 			</div>
 			<div class="form-group clearfix">
 				<small class="pull-right date">07:22</small>
-				<div class="col-md-12" style="padding-top:10px;">
+				<div class="col-sm-12" style="padding-top:10px;">
 					<strong><i class="fa fa-share" aria-hidden="true"></i>&nbsp;Eiendomsmeglern &lt;nyhetsbrev@eiendomsmeglern.no&gt;</strong>
 				</div>
-				<div class="col-md-12">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow-highlight">Re: Vi har 20% *RABATT* på våre tjenester i juni!!</span>
+				<div class="col-sm-10">
+					<span class="yellow-highlight">Re: Vi har 20% *RABATT* på våre tjenester i juni!!</span>
 				</div>
-				<div class="col-md-12">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Dette er et ekstremt bra tilbud som sparer deg for 10.000 kr.</small>
+				<div class="col-sm-10">
+					<small>Dette er et ekstremt bra tilbud som sparer deg for 10.000 kr.</small>
 				</div>
 			</div>
 		</div>
 		<div class="row info">
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<h4><i class="fa fa-thumbs-o-up"></i>&nbsp;Hvordan emne bør formuleres</h4>
 				<ul>
 					<li>Vær kort og presis. Tenk at nyhetsbrevet sannsynligvis åpnes på mobil.</li>
@@ -87,7 +88,7 @@
 					<li>Emnefeltet skal gjenspeile hva nyhetsbrevet omhandler.</li>
 				</ul>
 			</div>
-			<div class="col-md-6 donts">
+			<div class="col-sm-6 donts">
 				<h4><i class="fa fa-warning"></i>&nbsp;Hva bør du unngå</h4>
 				<ul>
 					<li>IKKE BRUK STORE BOKSTAVER</li>
@@ -108,13 +109,13 @@
 		<!--<div class="row">
 			<form id="av">
   			<div class="form-group">
-					<div class="col-md-12">
+					<div class="col-sm-12">
 						<h4>Test domene du sender fra</h4>
 					</div>
-					<div class="col-md-10">
+					<div class="col-sm-10">
 						<input type="text" class="form-control" id="sender" placeholder="domene.no" name="sender" />
 					</div>
-					<div class="col-md-2">
+					<div class="col-sm-2">
 						<input type="submit" class="btn btn-info btn-block" value="Submit">
 					</div>
 				</div>

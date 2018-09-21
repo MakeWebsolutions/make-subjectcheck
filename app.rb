@@ -43,6 +43,8 @@ post "/" do
   subject.gsub!(/\-/, ' ')
   subject.gsub!(/\"/, '')
 
+  puts subject
+
   #LENGTH RULE
   if subject.size > 80 
     other = Hash.new
@@ -111,6 +113,16 @@ post "/" do
     other[:word] = "0-100%"
     other[:status] = "warning"
     other[:comment] = "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon."
+
+    result << other
+  end
+
+  #PERCENTAGE RULE
+  if subject == "Kort innholdsbeskrivelse her"
+    other = Hash.new
+    other[:word] = "Kort innholdsbeskrivelse her"
+    other[:status] = "warning"
+    other[:comment] = "Dette er en standardtekst. Gi en beskrivelse av innholdet istedenfor."
 
     result << other
   end

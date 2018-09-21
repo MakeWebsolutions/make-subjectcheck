@@ -6,6 +6,7 @@ body {
 
 h2 {
 	font-weight: 300;
+	margin-bottom: 20px;
 }
 
 h4 {
@@ -27,7 +28,7 @@ small {
 }
 
 .info {
-	background: #007c2b;
+	background: #888;
 	padding: 10px;
 }
 
@@ -41,17 +42,17 @@ small {
 }
 
 .donts { 
-	background: #fcc900;
+	
 }
 
 .donts h4,
 .donts ul li {
-	color: #333;
+	color: #fff;
 }
 
 .remarks {
 	margin-top: 10px;
-	padding-left: 20px;
+	padding-left: 0;
 }
 
 .emailrow {
@@ -107,4 +108,29 @@ small {
 	display:inline-block;
 	padding: 2px 8px;
 	margin-right: 5px;
+}
+
+.subject { 
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.preheader {
+	margin-top: 10px;
+	display:block;
+}
+
+@media all and (max-width: 768px) {
+	body {
+		padding-top: 0;
+	}
+	.container {
+		width: 100%;
+	}
+	.subject { 
+		padding-left: 15px;
+		margin-bottom: 5px;
+	}
+	
+	.red { display:none;}
 }
