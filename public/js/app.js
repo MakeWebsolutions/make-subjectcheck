@@ -1,7 +1,9 @@
 ;(function() {
 
   $res = $('#res');
+  $err = $('#err');
   $res.hide();
+  $err.hide();
 
 	/* SUBJECT */
 	$('#ai').on('submit', function(e) {
@@ -40,10 +42,14 @@
   $('#sendLead').on('click', function(e) {
     var em = $('#lead').val();
     $res.hide();
+    $err.hide();
     
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         
-    if(!re.test(String(em).toLowerCase())) return false;
+    if(!re.test(String(em).toLowerCase())) {
+      $err.show();
+      return false;
+    }
 
     var r = $.get('https://www.menteduegentlig.tech/suggest?e=' + em, function(res) {
       return res;

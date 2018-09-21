@@ -130,6 +130,8 @@ pre {
 .preheader {
 	margin-top: 10px;
 	display:block;
+	font-style:italic;
+	font-size: .95em;
 }
 
 .make {
