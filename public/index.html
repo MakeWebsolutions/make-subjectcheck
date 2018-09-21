@@ -12,7 +12,9 @@
 </head>
 <body>
 	<div class="container">
-		<h2 class="text-center">Test emnefeltet for ditt nyhestbrev</h2>
+		<div class="row">
+			<h2 class="text-center">Test emnefeltet for ditt nyhestbrev</h2>
+		</div>
 		<div class="row emailrow">
 			<form id="ai">
 				<div class="form-group clearfix">
@@ -108,6 +110,24 @@
 				</ul>
 			</div>
 		</div>
+		<div class="row emailrow make" style="padding-top:15px;">
+			<div class="col-sm-12">
+				<label>Kontakt oss gjerne for å teste ut våre digitale markedsføringstjenester.</label>
+				<div class="row">
+					<div class="col-sm-9">
+						<input type="text" placeholder="E-postadresse" class="form-control" name="lead" id="lead" />
+					</div>
+					<div class="col-sm-3">
+						<button id="sendLead" class="btn btn-success btn-block">Send inn forespørsel</button>
+					</div>
+					<div class="col-sm-12" style="padding-top: 10px;" id="response"></div>
+					
+					<div class="col-sm-12" style="padding-top: 10px;" id="res">
+						Takk for din henvendelse! Vi kontakter deg så snart som mulig.
+					</div>
+				</div>
+			</div>
+		</div>
 		<!--<div class="row">
 			<form id="av">
   			<div class="form-group">
@@ -123,11 +143,18 @@
 				</div>
 			</form>
 		</div>-->
+		<div class="row text-center" style="margin-top:20px;">
+			<div class="col-sm-12">
+				<img src="https://make-handbook.herokuapp.com/img/brand/logo-make-dark.svg" />
+			</div>
+		</div>
 		<div class="row" style="margin-top: 20px;margin-left:0px;">
+			<div class="col-sm-12">
 			<pre>{
   "subject": "Emnefeltet sendes som JSON via POST" #api
 }
 			</pre>
+			<div>
 		</div>
 	</div>
 

@@ -1,5 +1,8 @@
 ;(function() {
 
+  $res = $('#res');
+  $res.hide();
+
 	/* SUBJECT */
 	$('#ai').on('submit', function(e) {
 		e.preventDefault();
@@ -34,17 +37,42 @@
    });
 	});
 
-	/* SENDER */
-	$('#av').on('submit', function(e) {
-		e.preventDefault();
+  $('#sendLead').on('click', function(e) {
+    var em = $('#lead').val();
+    $res.hide();
+    
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        
+    if(!re.test(String(em).toLowerCase())) return false;
 
-		$.ajax({
-      type: "GET",
-      url: "https://make-dnscheck.herokuapp.com?d=" + $("#sender").val(),
-      success: function(data) {
-				console.log(data);
+    var r = $.get('https://www.menteduegentlig.tech/suggest?e=' + em, function(res) {
+      return res;
+    });
+
+    r.then(function(res) {
+      if(res.corrected) {
+        $('#response').html('Mente du egentlig: ' + '<a style="cursor:pointer;" id="suggest">'+res.email_suggest + '</a>');
+        return;
+      }else{
+        var reqObj = {
+          text: em + ' har sjekket ut emnefelt-app og ønsker å bli kontaktet!'
+        }
+
+        $.ajax({
+          type: "POST",
+          url: "https://hooks.slack.com/services/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",
+          dataType: 'JSON',
+          data: JSON.stringify(reqObj)
+        });
+
+        $res.show();
+       
       }
-     });
-	});
+    });
+  });
+
+  $(document).on('click', '#suggest', function(e) {
+    em.val($(this).text())
+  });
 
 })();
