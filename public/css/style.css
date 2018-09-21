@@ -19,6 +19,12 @@ small {
 	color: #aaa;
 }
 
+pre {
+	border: none;
+	background: none;
+	padding: 0;
+}
+
 .container {
 	width: 960px;
 }
