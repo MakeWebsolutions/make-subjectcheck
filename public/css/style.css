@@ -2,6 +2,8 @@ body {
 	background: #ffffff;
 	padding-top: 60px;
 	font-weight: 200;
+	font-size:16px;
+	font-family: 'Lato', sans-serif;
 }
 
 h2 {
@@ -11,6 +13,10 @@ h2 {
 	padding-bottom: 15px;
 }
 
+ul {
+	padding-left: 15px;
+}
+
 h4 {
 	margin-bottom: 0;
 	font-weight: 300;
@@ -18,7 +24,7 @@ h4 {
 
 small {
 	font-size: 14px;
-	color: #aaa;
+	color: #777;
 }
 
 label {
@@ -40,7 +46,7 @@ pre {
 }
 
 .info {
-	background: #888;
+	background: #0086bf;
 	padding: 10px;
 }
 
@@ -84,18 +90,18 @@ pre {
 
 .green {
 	position:absolute;
-	left: -140px;
+	right: 350px;
 	top: 30px;
 	font-size: 18px;
-	transform: rotate(-15deg);
+	transform: rotate(0deg);
 }
 
 .red {
 	position:absolute;
-	right: -195px;
-	top: 35px;
+	right: 275px;
+	top: 30px;
 	font-size: 18px;
-	transform: rotate(15deg);
+	transform: rotate(0deg);
 }
 
 .yellow-highlight {
@@ -130,21 +136,28 @@ pre {
 .preheader {
 	margin-top: 10px;
 	display:block;
-	font-style:italic;
 	font-size: .95em;
 }
 
 .make {
 	background: #0086bf;
 	color:#fff;
+	margin-top: 20px;
 }
 
 #sendLead { margin-top: 0; }
+
+.btn-success {
+	background-color: #009736;
+	border-color:#009736;
+	letter-spacing: 1;
+}
 
 @media all and (max-width: 768px) {
 	body {
 		padding-top: 0;
 	}
+	h2 { padding-left: 15px;padding-right:15px;font-size: 25px;}
 	.container {
 		width: 100%;
 	}
@@ -155,5 +168,5 @@ pre {
 
 	#sendLead { margin-top: 5px; }
 	
-	.red { display:none;}
+	.red, .green { display:none;}
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Test emnefeltet for ditt nyhetsbrev</title>
+	<title>Test emnefeltet og preheader for ditt nyhetsbrev</title>
 	<meta name="description" content="Test emnefeltet før du sender ut nyhetsbrev. Det kan være forskjellen på innboks og spam.">
 
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<h2 class="text-center">Test emnefeltet for ditt nyhestbrev</h2>
+			<h2 class="text-center">Test emnefeltet og preheader for ditt nyhestbrev</h2>
 		</div>
 		<div class="row emailrow">
 			<form id="ai">
@@ -23,7 +23,7 @@
 						<h4 style="margin-bottom: 10px;"><i class="fa fa-paperclip" aria-hidden="true"></i>&nbsp;Din avsender &lt;avsender@domene.no&gt;</h4>
 					</div>
 					<div class="col-sm-10">
-						<input type="text" class="form-control subject" id="subject" placeholder="Emnefeltet du ønsker å teste" name="subject" />
+						<input type="text" class="form-control subject" id="subject" placeholder="Emnefeltet/preheader du ønsker å teste" name="subject" />
 					</div>
 					<div class="col-sm-2">
 						<input type="submit" class="btn btn-success btn-block" value="Test">
@@ -41,8 +41,8 @@
 		</div>
 		<div class="row emailrow">
 			<div class="green hidden-sm">
+				<i class="fa fa-arrow-left text-success" aria-hidden="true"></i>
 				<span class="text-success text-right">Denne er<br/>formulert bra.</span>
-				<i class="fa fa-arrow-right text-success" aria-hidden="true"></i>
 			</div>
 			<div class="form-group clearfix">
 				<small class="pull-right date">07:22</small>
@@ -112,13 +112,13 @@
 		</div>
 		<div class="row emailrow make" style="padding-top:15px;">
 			<div class="col-sm-12">
-				<label>Kontakt oss gjerne for å teste ut våre digitale markedsføringstjenester.</label>
+				<label>Kontakt oss for en innføring i Make Nyhetsbrev.</label>
 				<div class="row">
-					<div class="col-sm-9">
+					<div class="col-sm-10">
 						<input type="text" placeholder="E-postadresse" class="form-control" name="lead" id="lead" />
 					</div>
-					<div class="col-sm-3">
-						<button id="sendLead" class="btn btn-success btn-block">Send inn forespørsel</button>
+					<div class="col-sm-2">
+						<button id="sendLead" class="btn btn-success btn-block">SEND FORESPØRSEL</button>
 					</div>
 					<div class="col-sm-12" style="padding-top: 10px;" id="response"></div>
 					
@@ -149,7 +149,7 @@
 		</div>-->
 		<div class="row text-center" style="margin-top:20px;margin-bottom:20px;">
 			<div class="col-sm-12">
-				<img src="https://make-handbook.herokuapp.com/img/brand/logo-make-dark.svg" />
+				<a target="_blank" href="https://make.as/nyhetsbrev?utm_source=Subjectchecker&utm_content=Signup"><img src="https://make-handbook.herokuapp.com/img/brand/logo-make-dark.svg" /></a>
 			</div>
 		</div>
 
