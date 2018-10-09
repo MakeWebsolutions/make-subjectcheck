@@ -14,7 +14,7 @@ end
 before do
   headers 'Access-Control-Allow-Origin' => '*',
           'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST'],
-          'Access-Control-Allow-Headers' => ['Content-Type', 'Accept', 'X-Requested-With', 'access_token']
+          'Access-Control-Allow-Headers' => ['Content-Type', 'X-Frame-Options', 'Accept', 'X-Requested-With', 'access_token']
 
 end
 
