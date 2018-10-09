@@ -11,6 +11,8 @@ configure do
   enable :cross_origin
 end
 
+set :protection, :except => :frame_options
+
 before do
   headers 'Access-Control-Allow-Origin' => '*',
           'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST'],
