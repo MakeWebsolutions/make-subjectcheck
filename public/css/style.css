@@ -9,7 +9,7 @@
 
 body {
 	background: #ffffff;
-	padding-top: 100px;
+	padding-top: 145px;
 	font-weight: 200;
 	font-size:16px;
 	font-family: 'Lato', sans-serif;
@@ -18,6 +18,12 @@ body {
 h1 {
 	font-family: "Museo Sans Rounded";
 	font-size:35px;
+	margin-bottom: 60px;
+}
+
+h4 {
+	font-family: "Museo Sans Rounded";
+	font-size:25px;
 }
 
 h2 {
@@ -29,6 +35,10 @@ h2 {
 
 ul {
 	padding-left: 15px;
+}
+
+ul > li {
+	margin-bottom: 4px;
 }
 
 h4 {
@@ -78,7 +88,7 @@ pre {
 
 .info {
 	background: #0086bf;
-	padding: 10px;
+	padding: 20px;
 }
 
 .info h4,
@@ -87,7 +97,7 @@ pre {
 }
 
 .info h4 {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .donts { 
@@ -109,6 +119,10 @@ pre {
 	padding-bottom: 15px;
 	border-bottom: 1px solid #e5e5e5;
 	position:relative;
+}
+
+.emailrow-lg {
+	padding-bottom: 40px;
 }
 
 .date {
