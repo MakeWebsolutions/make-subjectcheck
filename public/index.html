@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
 	<meta charset="UTF-8">
 	<title>Test emnefeltet og preheader for ditt nyhetsbrev</title>
@@ -15,9 +15,16 @@
 	<link rel="apple-touch-icon-precomposed" href="https://www.make.as/wp-content/uploads/cropped-Logo-symbol-1-180x180.png" />
 </head>
 <body>
-	<div class="container">
+	<div class="navbar navbar-fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="https://make.as/nyhetsbrev?utm_source=Emnefeltsjekker&amp;utm_content=Signup">
+ 				<img src="images/logo-dark.svg" />
+ 			</a>
+ 		</div>
+	</div>
+	<div class="container content">
 		<div class="row">
-			<h2 class="text-center">Test emnefeltet og preheader for ditt nyhestbrev</h2>
+			<h1 class="text-center">Test emnefeltet og preheader for ditt nyhestbrev</h1>
 		</div>
 		<div class="row emailrow">
 			<form id="ai">
@@ -30,7 +37,7 @@
 						<input type="text" class="form-control subject" id="subject" placeholder="Emnefeltet/preheader du ønsker å teste" name="subject" />
 					</div>
 					<div class="col-sm-2">
-						<input type="submit" class="btn btn-success btn-block" value="Test">
+						<input type="submit" class="btn btn-success btn-block btn-lg" value="Test">
 					</div>
 				</div>
 				<div class="col-sm-10">
@@ -46,7 +53,7 @@
 		<div class="row emailrow">
 			<div class="green hidden-sm">
 				<i class="fa fa-arrow-left text-success" aria-hidden="true"></i>
-				<span class="text-success text-right">Denne er<br/>formulert bra.</span>
+				<span class="text-success text-right">Denne er formulert bra.</span>
 			</div>
 			<div class="form-group clearfix">
 				<small class="pull-right date">07:22</small>
@@ -64,7 +71,7 @@
 		<div class="row emailrow">
 			<div class="red hidden-sm">
 				<i class="fa fa-arrow-left text-danger" aria-hidden="true"></i>
-				<span class="text-danger text-left">Denne kan oppfattes<br/>som spam.</span>
+				<span class="text-danger text-left">Denne kan oppfattes som spam.</span>
 			</div>
 			<div class="form-group clearfix">
 				<small class="pull-right date">07:22</small>
@@ -151,21 +158,9 @@
 				</div>
 			</form>
 		</div>-->
-		<div class="row text-center" style="margin-top:20px;margin-bottom:20px;">
-			<div class="col-sm-12">
-				<a target="_blank" href="https://make.as/nyhetsbrev?utm_source=Subjectchecker&utm_content=Signup"><img src="https://make-handbook.herokuapp.com/img/brand/logo-make-dark.svg" /></a>
-			</div>
-		</div>
-
-		<!--<div class="row" style="margin-top: 20px;margin-left:0px;">
-			<div class="col-sm-12">
-			<pre>{
-  "subject": "Emnefeltet sendes som JSON via POST" #api
-}
-			</pre>
-			<div>-->
-		</div>
 	</div>
+	<div class="footer">COPYRIGHT © MAKE AS. ALL RIGHTS RESERVED.</div>
+</div>
 
 	
 

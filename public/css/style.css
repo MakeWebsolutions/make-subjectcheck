@@ -1,9 +1,23 @@
+@font-face {
+  font-family: 'Museo Sans Rounded';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('https://cdn2.hubspot.net/hubfs/2875937/Theme/fonts/Museo-Sans-Rounded-700/Museo-Sans-Rounded-700.woff') format('woff'), /* Pretty Modern Browsers */
+       url('https://cdn2.hubspot.net/hubfs/2875937/Theme/fonts/Museo-Sans-Rounded-700/Museo-Sans-Rounded-700.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('https://cdn2.hubspot.net/hubfs/2875937/Theme/fonts/Museo-Sans-Rounded-700/Museo-Sans-Rounded-700.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 body {
 	background: #ffffff;
-	padding-top: 60px;
+	padding-top: 100px;
 	font-weight: 200;
 	font-size:16px;
 	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	font-family: "Museo Sans Rounded";
+	font-size:35px;
 }
 
 h2 {
@@ -37,8 +51,25 @@ pre {
 	padding: 0;
 }
 
+.navbar {
+	background-color: #FAFAFA;
+	height:63px;
+}
+
+.navbar img {
+	max-width: 100px;
+}
+
+.navbar .navbar-brand {
+	padding-top: 18px;
+}
+
 .container {
 	width: 1130px;
+}
+
+.container.content {
+	padding-bottom: 100px;
 }
 
 .form-group {
@@ -90,7 +121,7 @@ pre {
 
 .green {
 	position:absolute;
-	right: 350px;
+	right: 485px;
 	top: 30px;
 	font-size: 18px;
 	transform: rotate(0deg);
@@ -98,7 +129,7 @@ pre {
 
 .red {
 	position:absolute;
-	right: 275px;
+	right: 450px;
 	top: 30px;
 	font-size: 18px;
 	transform: rotate(0deg);
@@ -110,6 +141,10 @@ pre {
      13px 0 3px yellow,
      16px 0 6px yellow,
     -16px 0 6px yellow;
+}
+
+.btn-lg {
+	padding: 15px 20px;
 }
 
 .alert {
@@ -131,6 +166,7 @@ pre {
 .subject { 
 	padding-left: 10px;
 	padding-bottom: 5px;
+	height:56px;
 }
 
 .preheader {
@@ -153,11 +189,17 @@ pre {
 	letter-spacing: 1;
 }
 
+.footer {
+  background-color: #181818;
+  text-align: center;
+  color: #838383;
+  padding: 20px 35px;
+  font-size: 12px;
+}
+
 @media all and (max-width: 768px) {
-	body {
-		padding-top: 0;
-	}
-	h2 { padding-left: 15px;padding-right:15px;font-size: 25px;}
+	body { padding-top: 60px; }
+	h1 { padding-left: 15px;padding-right:15px;font-size: 25px;}
 	.container {
 		width: 100%;
 	}
