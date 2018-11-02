@@ -35,6 +35,7 @@ module Register
     { word: "kjempetilbud", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "gavekort", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "gratis", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "grattis", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "bestselger", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "bestselgere", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "fordeler", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
@@ -50,6 +51,9 @@ module Register
     { word: "kjøp", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "kungjøring", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "vekt", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "haste", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "vikig", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "velkomstgave", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
 
     
     #TEST
@@ -116,6 +120,7 @@ module Register
     { word: "fantastiske", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "eksklusivt", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "eksklusive", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "beste", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
 
     #NIGERIA
     { word: "hjelp", plural: true, comment: "Økt spamfare. Kan forstås som Nigeria/svindel mail.", state: "warning" },

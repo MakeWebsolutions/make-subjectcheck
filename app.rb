@@ -50,15 +50,15 @@ post "/" do
   #LENGTH RULE
   if subject.size > 80 
     other = Hash.new
-    other[:word] = "Lengde (" + subject.size.to_s + " tegn > 78 tegn)"
+    other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn)"
     other[:status] = "warning"
-    other[:comment] = "Kan føre til scrolling i emnefeltet. Vurder omformulering."
+    other[:comment] = "Kan føre til scrolling i emnefeltet og økt spamfare. Vurder omformulering."
 
     result << other
   end
 
   #MIN LENGTH RULE
-  if subject.size <= 15
+  if subject.size <= 10
     other = Hash.new
     other[:word] = subject
     other[:status] = "warning"
