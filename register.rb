@@ -6,9 +6,9 @@ module Register
     { word: "knallgode", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "kupp", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "vinn", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "lodd", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "lodd", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "rabatt", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "salg", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "salg", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "sale", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "justforyou", plural: false, comment: "Bør omformuleres", state: "warning" },
     { word: "billig", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "danger" },
@@ -31,17 +31,16 @@ module Register
     { word: "kampanje", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "jackpot", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "kampanjer", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "tilbudsdager", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "tilbudsdag", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "kjempetilbud", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "gavekort", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "gratis", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "grattis", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "bestselger", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "bestselgere", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "fordeler", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "bestselge", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "fordel", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "kupong", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "gullkupong", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "kupongdager", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "kupongdag", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "kjempetilbud", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "lotteri", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "pris", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
@@ -49,21 +48,23 @@ module Register
     { word: "knallpris", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "spill", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "kjøp", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "kungjøring", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "kunngjøring", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "vekt", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "haste", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "hast", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "vikig", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "velkomstgave", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "lotto", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
 
     
     #TEST
     { word: "test", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "lorem", plural: false, comment: "Forbindes med tester og kan fort ende opp i søppelkassen.", state: "warning" },
+    { word: "ipsum", plural: false, comment: "Forbindes med tester og kan fort ende opp i søppelkassen.", state: "warning" },
+    { word: "dolor", plural: false, comment: "Forbindes med tester og kan fort ende opp i søppelkassen.", state: "warning" },
     
     #LÅN
     { word: "lån", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "penger", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    { word: "pengene", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "penger", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "konto", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "luksus", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "forbrukslån", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
@@ -76,6 +77,7 @@ module Register
     { word: "betalingskortet", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "finansiering", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     { word: "finansieringen", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
+    { word: "lånetilbud", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     
     #MISC
     { word: "øl", plural: false, comment: "Tommel opp", state: "success" },
@@ -88,10 +90,7 @@ module Register
     { word: "fornyelse", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info" },
     { word: "abonnement", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info" },
     { word: "kredittid", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info" },
-    { word: "helvete", plural: false, comment: "Ikke alle liker banning. Vurder omformulering", state: "info" },
-    { word: "helvetes", plural: false, comment: "Ikke alle liker banning. Vurder omformulering", state: "info" },
-    { word: "lotto", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
-    
+        
     #BLACKLIST
     { word: "pikk", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "danger" },
     { word: "cock", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "danger" },
@@ -102,6 +101,9 @@ module Register
     { word: "kontonummer", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "danger" },
     { word: "pin", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "danger" },
     { word: "pinkode", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "danger" },
+    { word: "helvete", plural: false, comment: "Ikke alle liker banning. Vurder omformulering", state: "danger" },
+    { word: "helvetes", plural: false, comment: "Ikke alle liker banning. Vurder omformulering", state: "danger" },
+    { word: "pille", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "danger" },
 
     #GENERAL
     { word: "nyhetsbrev", plural: false, comment: "Emne kan være avgjørende for om mailen åpnes eller ikke. Gi mer mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },

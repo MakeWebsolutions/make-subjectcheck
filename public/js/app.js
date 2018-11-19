@@ -11,10 +11,10 @@
 		$('.remarks').empty();
 
 		var obj = {
-			subject: $("#subject").val()
+			subject: $("#subject").val().replace(/\?+/, '?')
 		};
-		
-		$.ajax({
+
+   $.ajax({
       type: "POST",
       url: "/",
       dataType: 'json',

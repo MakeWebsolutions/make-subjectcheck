@@ -44,9 +44,7 @@ post "/" do
   #CLEAN STRING
   subject.gsub!(/\-/, ' ')
   subject.gsub!(/\"/, '')
-
-  puts subject
-
+ 
   #LENGTH RULE
   if subject.size > 80 
     other = Hash.new
@@ -68,11 +66,20 @@ post "/" do
   end 
 
   #SPECIAL CHARS
-  if subject =~ /[\@\#\$\^\%\&\~\*]/
+  if subject =~ /[\@\$\^\%\&\~\*]/
     other = Hash.new
     other[:word] = "Spesialtegn (@#$^%&~*)"
     other[:status] = "warning"
     other[:comment] = "Økt spamfare. Ikke bruk dem hvis du absolutt ikke må."
+
+    result << other
+  end
+
+  if subject =~ /[\#\*]/
+    other = Hash.new
+    other[:word] = "# (Hashtag)"
+    other[:status] = "warning"
+    other[:comment] = "Dette fremstår som relativt utdatert."
 
     result << other
   end
@@ -182,7 +189,7 @@ post "/" do
 
     result << other
   end
-  
+
   { :result => result }.to_json
  end
 
