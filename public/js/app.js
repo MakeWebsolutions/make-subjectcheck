@@ -1,5 +1,37 @@
 ;(function() {
 
+  //FIX COOKIE ISSUES WITH POPUP
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1,c.length);
+        }
+        if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length,c.length);
+        }
+    }
+    return null;
+  }
+  
+  function createCookie(name,value,days) {
+      if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 *1000));
+          var expires = "; expires=" + date.toGMTString();
+      } else {
+          var expires = "";
+      }
+      document.cookie = name + "=" + value + expires + "; path=/";
+  }
+
+  if(readCookie('mnmClosed')) {
+    createCookie('mnmClosed', false, 1)
+  }
+  //END FIX COOKIE ISSUES WITH POPUP
+
   $res = $('#res');
   $err = $('#err');
   $res.hide();
