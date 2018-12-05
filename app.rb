@@ -50,7 +50,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn)"
     other[:status] = "warning"
-    other[:comment] = "Kan føre til scrolling i emnefeltet og økt spamfare. Vurder omformulering."
+    other[:comment] = "Vurder og del opp emnefeltet og flytt noe av det over som preheader"
 
     result << other
   end

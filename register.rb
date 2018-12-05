@@ -106,11 +106,11 @@ module Register
     { word: "pille", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "danger" },
 
     #GENERAL
-    { word: "nyhetsbrev", plural: false, comment: "Emne kan være avgjørende for om mailen åpnes eller ikke. Gi mer mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
-    { word: "nyhetsmail", plural: false, comment: "Emne kan være avgjørende for om mailen åpnes eller ikke. Gi mer mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
-    { word: "newsmail", plural: false, comment: "Emne kan være avgjørende for om mailen åpnes eller ikke. Gi mer mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
-    { word: "månadsbrev", plural: false, comment: "Emne kan være avgjørende for om mailen åpnes eller ikke. Gi mer mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
-    { word: "infomail", plural: false, comment: "Emne kan være avgjørende for om mailen åpnes eller ikke. Gi mer mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
+    { word: "nyhetsbrev", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
+    { word: "nyhetsmail", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
+    { word: "newsmail", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
+    { word: "månadsbrev", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
+    { word: "infomail", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva mailen omhandler.", state: "warning" },
     
     #PROMISES
     { word: "fantastisk", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
