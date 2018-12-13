@@ -100,8 +100,9 @@ pre {
 	margin-bottom: 20px;
 }
 
-.donts { 
-	
+.footer-text { 
+	display:inline-block;
+	color: #fff;
 }
 
 .donts h4,
@@ -222,6 +223,15 @@ pre {
 	.subject { 
 		padding-left: 15px;
 		margin-bottom: 5px;
+	}
+
+	.footer-text { 
+		display:block;
+	}
+
+	.footer .form-inline .form-control {
+		width:33.3%;
+		display:inline-block;
 	}
 
 	#sendLead { margin-top: 5px; }

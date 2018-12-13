@@ -80,8 +80,10 @@ module Register
     { word: "lånetilbud", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "warning" },
     
     #MISC
-    { word: "øl", plural: false, comment: "Tommel opp", state: "success" },
-    { word: "Øl", plural: false, comment: "Tommel opp", state: "success" },
+    { word: "øl", plural: false, comment: "Ja takk!", state: "success" },
+    { word: "Øl", plural: false, comment: "Ja takk!", state: "success" },
+    { word: "Rinnan", plural: false, comment: "Det er er vel fortsatt ikke innafor...", state: "danger" },
+    { word: "rinnan", plural: false, comment: "Det er er vel fortsatt ikke innafor...", state: "danger" },
     { word: "faktura", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info" },
     { word: "forfalt", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info" },
     { word: "forfalte", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info" },

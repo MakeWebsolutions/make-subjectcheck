@@ -185,7 +185,7 @@ post "/" do
     other = Hash.new
     other[:word] = ""
     other[:status] = "success"
-    other[:comment] = "Ingenting å utsette på dette emnefeltet!"
+    other[:comment] = "Ingenting å utsette på denne formuleringen!"
 
     result << other
   end

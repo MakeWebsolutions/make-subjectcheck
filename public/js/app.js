@@ -1,43 +1,37 @@
 ;(function() {
+  'use strict';
 
-  //FIX COOKIE ISSUES WITH POPUP
-  function readCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ') {
-            c = c.substring(1,c.length);
-        }
-        if (c.indexOf(nameEQ) === 0) {
-            return c.substring(nameEQ.length,c.length);
-        }
-    }
-    return null;
-  }
-  
-  function createCookie(name,value,days) {
-      if (days) {
-          var date = new Date();
-          date.setTime(date.getTime() + (days * 24 * 60 * 60 *1000));
-          var expires = "; expires=" + date.toGMTString();
-      } else {
-          var expires = "";
+  function analyze(obj, remarks) {
+    $.ajax({
+      type: "POST",
+      url: "/",
+      dataType: 'json',
+      data: JSON.stringify(obj),
+      success: function(data) {
+        
+        data.result.forEach(function(item) {
+          var icon, li;
+
+          if(item.status === 'danger') {
+            icon = 'thumbs-o-down';
+          }else if (item.status === 'warning') {
+            icon = 'exclamation-triangle';
+          }else if(item.status === 'info') {
+            icon = 'info-circle';
+          }else{
+            icon = 'thumbs-o-up';
+          }
+
+          li = $('<div/>').addClass('alert alert-'+item.status).html('<i class="fa fa-'+icon+'" aria-hidden="true"></i><strong class="word">'+item.word+'</strong>' + item.comment);
+          $('.'+remarks).append(li);
+        });
       }
-      document.cookie = name + "=" + value + expires + "; path=/";
+    });
   }
 
-  if(readCookie('mnmClosed')) {
-    createCookie('mnmClosed', false, 1)
-  }
-  //END FIX COOKIE ISSUES WITH POPUP
 
-  $res = $('#res');
-  $err = $('#err');
-  $res.hide();
-  $err.hide();
 
-	/* SUBJECT */
+  /* SUBJECT */
 	$('#ai').on('submit', function(e) {
 		e.preventDefault();
 		$('.remarks').empty();
@@ -46,71 +40,66 @@
 			subject: $("#subject").val().replace(/\?+/, '?')
 		};
 
-   $.ajax({
-      type: "POST",
-      url: "/",
-      dataType: 'json',
-      data: JSON.stringify(obj),
-      success: function(data) {
-				
-				data.result.forEach(function(item) {
-					if(item.status === 'danger') {
-						icon = 'thumbs-o-down';
-					}else if (item.status === 'warning') {
-						icon = 'exclamation-triangle';
-					}else if(item.status === 'info') {
-						icon = 'info-circle';
-					}else{
-						icon = 'thumbs-o-up';
-					}
-
-					li = $('<div/>').addClass('alert alert-'+item.status).html('<i class="fa fa-'+icon+'" aria-hidden="true"></i><strong class="word">'+item.word+'</strong>' + item.comment);
-					$('.remarks').append(li);
-				});
-			}
-   });
+    analyze(obj, 'remarks');
 	});
 
-  $('#sendLead').on('click', function(e) {
-    var em = $('#lead').val();
-    $res.hide();
-    $err.hide();
-    
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        
-    if(!re.test(String(em).toLowerCase())) {
-      $err.show();
-      return false;
+  /* PREHADER */
+  $('#aj').on('submit', function(e) {
+    e.preventDefault();
+    $('.remarks2').empty();
+
+    var obj = {
+      subject: $('#preheader').val().replace(/\?+/, '?')
     }
 
-    var r = $.get('https://www.menteduegentlig.tech/suggest?e=' + em, function(res) {
-      return res;
-    });
+    analyze(obj, 'remarks2');
+  });
 
-    r.then(function(res) {
-      if(res.corrected) {
-        $('#response').html('Mente du egentlig: ' + '<a style="cursor:pointer;" id="suggest">'+res.email_suggest + '</a>');
-        return;
-      }else{
-        var reqObj = {
-          text: em + ' har sjekket ut emnefelt-app og ønsker å bli kontaktet!'
-        }
+  //Attach event for emailsubmit
+  $('body').on('click', '#user_submit', function(e) {
+    e.preventDefault();
+    e.stopPropagation()
 
-        $.ajax({
-          type: "POST",
-          url: "https://hooks.slack.com/services/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",
-          dataType: 'JSON',
-          data: JSON.stringify(reqObj)
-        });
+    var $user_email = $('#user_email'),
+        $user_phone = $('#user_phone');
 
-        $res.show();
+    if(!$user_email.val()) {
+      $user_email.addClass('user_error');
+      return;
+    }
+
+    if(!$user_phone.val()) {
+      $user_phone.addClass('user_error');
+      return;
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: 'https://www.make.as/make-spamtester.php',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        email: $user_email.val(),
+        phone: $user_phone.val(),
+        page_name: 'Nyhetsbrev Emnetester - Make AS',
+        page_url: 'https://emnefelt.make.as',
+        app_name: 'Newsletter'
+      },
+      success: function(data, textStatus, request){
+        var $s = $('<div class="toastr">Vi har registrert din henvendelse!</div>');
+          $('body').append($s);
+
+        setTimeout(function() {
+          $s.remove();
+        }, 3000);       
+      },
+      error: function (request, textStatus, errorThrown) {
+       console.log('error');
        
       }
     });
-  });
 
-  $(document).on('click', '#suggest', function(e) {
-    em.val($(this).text())
   });
 
 })();
