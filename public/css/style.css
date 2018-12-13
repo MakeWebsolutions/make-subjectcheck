@@ -212,6 +212,9 @@ pre {
   padding: 20px 35px;
   font-size: 12px;
   letter-spacing: 2px;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .toastr {
@@ -223,6 +226,12 @@ pre {
   background: #7db613;
   color:#fff;
   width: 320px;
+}
+
+@media all and (max-width: 1130px) {
+  .container {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 768px) {
