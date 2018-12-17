@@ -34,6 +34,8 @@
   /* SUBJECT */
 	$('#ai').on('submit', function(e) {
 		e.preventDefault();
+    e.stopPropagation();
+
 		$('.remarks').empty();
 
 		var obj = {
@@ -46,6 +48,8 @@
   /* PREHADER */
   $('#aj').on('submit', function(e) {
     e.preventDefault();
+    e.stopPropagation();
+    
     $('.remarks2').empty();
 
     var obj = {
