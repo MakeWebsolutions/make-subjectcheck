@@ -21,6 +21,12 @@ h1 {
 	margin-bottom: 60px;
 }
 
+h3 {
+  font-family: "Museo Sans Rounded";
+  font-size: 30px;
+  font-weight: 300;
+}
+
 h4 {
 	font-family: "Museo Sans Rounded";
 	font-size:25px;
@@ -246,7 +252,7 @@ pre {
   background-color: #009736;
   border-color:#009736;
   letter-spacing: 1;
-  padding: 8px 15px;
+  padding: 13px 15px;
   font-size: 13px;
   font-weight: 200;
   text-transform: uppercase;
