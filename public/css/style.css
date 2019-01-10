@@ -13,7 +13,6 @@ body {
 	font-weight: 200;
 	font-size:16px;
 	font-family: 'Lato', sans-serif;
-  padding-bottom: 50px;
 }
 
 h1 {
@@ -206,24 +205,6 @@ pre {
 	letter-spacing: 1;
 }
 
-.footer {
-  background-color: #181818;
-  text-align: center;
-  color: #838383;
-  padding: 20px 35px;
-  font-size: 12px;
-  letter-spacing: 2px;
-  position:fixed;
-  bottom: 0;
-  width: 100%;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.footer .footer-text { 
-  display:block;
-}
-
 .toastr {
   position: fixed;
   bottom: 10px;
@@ -234,6 +215,50 @@ pre {
   color:#fff;
   width: 320px;
 }
+
+/* SIGNUPBOX */
+
+.cta {
+  padding: 50px 0px 50px 0px;
+  background-color: #0086bf;
+  text-align:center;
+}
+
+.cta h3 {
+  color:#fff;
+}
+
+.modal {
+  display:block;
+  width: 500px;
+  margin: 6% auto;
+}
+
+#makemodal .col-sm-2:first-of-type {
+  padding-left: 0;
+}
+
+#makemodal .col-sm-10 {
+  padding-right: 0;
+}
+
+.btn-success-cta, .btn-success-cta:hover {
+  background-color: #009736;
+  border-color:#009736;
+  letter-spacing: 1;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 11px;
+  color:#fff;
+}
+
+/* END SIGNUP */
 
 @media all and (max-width: 1130px) {
   .container {
