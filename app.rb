@@ -182,8 +182,10 @@ post "/" do
   message = Message.new
   type    = message.get_type(subject)
   other = Hash.new
+
+  puts type
    
-  if type != 'unicode' 
+  if type.to_s != 'unicode' 
     other[:word] = "Tekst inneholder ikke noen emojis"
     other[:status] = "info-circle analyzer-blue"
     other[:comment] = "Det er fordelaktig for åpningsraten å benytte emoijs i teksten."
@@ -227,12 +229,7 @@ post "/" do
   end
 
   if result.size == 0
-    other = Hash.new
-    other[:word] = ""
-    other[:status] = "thumbs-up analyzer-green"
-    other[:comment] = "Ingenting å utsette på denne formuleringen!"
-
-    result << other
+    #DO NOTHING
   end
 
   { :result => result }.to_json
