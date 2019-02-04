@@ -61,7 +61,7 @@ post "/" do
   if subject.size.to_i > 50 
     other = Hash.new
     other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn). Din tekst inneholder " + subject.size.to_s + " tegn."
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Vurder og kort ned teksten til rundt 50 tegn."
 
     result << other
@@ -72,7 +72,7 @@ post "/" do
   if words.length < 5
     other = Hash.new
     other[:word] = "Antall ord"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Teksten bør bestå av 5 - 7 ord. Dette er litt for kort."
    
     result << other
@@ -81,7 +81,7 @@ post "/" do
   if words.length.to_i > 7
     other = Hash.new
     other[:word] = "Antall ord"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Teksten bør bestå av 5 - 7 ord. (Din tekst inneholder " + words.length.to_s + " ord)."
    
     result << other
@@ -91,7 +91,7 @@ post "/" do
   if subject.size.to_i <= 10
     other = Hash.new
     other[:word] = "Lengden er for kort"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Teksten er avgjørende for om e-posten åpnes eller ikke. Gi en mer detaljert beskrivelse om hva e-posten omhandler."
    
     result << other
@@ -101,7 +101,7 @@ post "/" do
   if subject.to_s =~ /[\@\$\^\%\&\~\*]/
     other = Hash.new
     other[:word] = "Spesialtegn (@#$^%&~*)"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Økt spamfare. Ikke bruk dem hvis du absolutt ikke må."
 
     result << other
@@ -110,7 +110,7 @@ post "/" do
   if subject.to_s =~ /[\#\*]/
     other = Hash.new
     other[:word] = "# (Hashtag)"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Dette fremstår som relativt utdatert."
 
     result << other
@@ -120,7 +120,7 @@ post "/" do
   if subject.to_s =~ /^(Re:|Fwd:|fw:|Reminder:)/i
     other = Hash.new
     other[:word] = "Sikker kilde (re:, fwd:)"
-    other[:status] = "danger"
+    other[:status] = "times-circle"
     other[:comment] = "Økt spamfare. Ikke utgi deg for å være en sikker kilde. La SPF og DKIM gjøre den jobben."
 
     result << other
@@ -130,7 +130,7 @@ post "/" do
   if subject.to_s =~ /\!{1,}/
     other = Hash.new
     other[:word] = "Utropstegn"
-    other[:status] = "danger"
+    other[:status] = "times-circle"
     other[:comment] = "Oppfattes som skrikende og spamete. Bruk av utropstegn virker mot sin hensikt."
 
     subject.gsub!(/[\!]+/, '')
@@ -142,7 +142,7 @@ post "/" do
   if subject.to_s =~ /[A-Z]{3,}?/
     other = Hash.new
     other[:word] = "CAPS LOCK"
-    other[:status] = "danger"
+    other[:status] = "times-circle"
     other[:comment] = "Oppfattes som skrikende og spamete. Bruk kun stor bokstav i starten av setninger."
 
     result << other
@@ -152,7 +152,7 @@ post "/" do
   if subject.to_i =~ /[0-9]{0,2}%/
     other = Hash.new
     other[:word] = "0-100%"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon."
 
     result << other
@@ -162,7 +162,7 @@ post "/" do
   if subject.to_s == "Kort innholdsbeskrivelse her"
     other = Hash.new
     other[:word] = "Kort innholdsbeskrivelse her"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Dette er en standardtekst. Gi en beskrivelse av innholdet istedenfor."
 
     result << other
@@ -172,7 +172,7 @@ post "/" do
   if subject.to_s =~ /((?:kr)(?:\.)?(?:\s)?(?:\.)?(?:[0-9]+))|([0-9]+(?:\s)?(?:kr))|[0-9]+(?=\,)/
     other = Hash.new
     other[:word] = "0-1.000.000 kr"
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Økt spamfare. Unngå å kombinere disse med tilsvarende advarsler."
 
     result << other
@@ -185,7 +185,7 @@ post "/" do
    
   if type != 'unicode' 
     other[:word] = "Tekst inneholder ikke noen emojis"
-    other[:status] = "info"
+    other[:status] = "info-circle"
     other[:comment] = "Det er fordelaktig for åpningsraten å benytte emoijs i teksten."
 
     result << other
@@ -220,7 +220,7 @@ post "/" do
   else
     other = Hash.new
     other[:word] = subject
-    other[:status] = "warning"
+    other[:status] = "exclamation-triangle"
     other[:comment] = "Teksten er være avgjørende for om e-posten åpnes eller ikke. Gi en mer detaljert beskrivelse om hva e-posten omhandler."
    
     result << other
