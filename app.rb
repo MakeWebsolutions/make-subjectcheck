@@ -46,27 +46,47 @@ post "/" do
   subject.gsub!(/\"/, '')
  
   #LENGTH RULE
-  if subject.size > 80 
+  if subject.size.to_i > 50 
     other = Hash.new
     other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn)"
     other[:status] = "warning"
-    other[:comment] = "Vurder og del opp emnefeltet og flytt noe av det over som preheader"
+    other[:comment] = "Vurder og kort ned teksten til rundt 50 tegn."
 
     result << other
   end
 
-  #MIN LENGTH RULE
-  if subject.size <= 10
+  #COUNT WORDS
+  words = subject.to_s.split(' ')
+  if words.length < 5
     other = Hash.new
-    other[:word] = subject
+    other[:word] = "Antall ord"
     other[:status] = "warning"
-    other[:comment] = "Emne er avgjørende for om mailen åpnes eller ikke. Gi en mer detaljert beskrivelse om hva mailen omhandler."
+    other[:comment] = "Teksten bør bestå av 5 - 7 ord. Dette er litt for kort."
+   
+    result << other
+  end
+
+  if words.length.to_i > 7
+    other = Hash.new
+    other[:word] = "Antall ord"
+    other[:status] = "warning"
+    other[:comment] = "Teksten bør bestå av 5 - 7 ord. (Din tekst inneholder " + words.length.to_s + " ord)."
+   
+    result << other
+  end
+
+  #MIN LENGTH RULE
+  if subject.size.to_i <= 10
+    other = Hash.new
+    other[:word] = "Lengden er for kort"
+    other[:status] = "warning"
+    other[:comment] = "Teksten er avgjørende for om e-posten åpnes eller ikke. Gi en mer detaljert beskrivelse om hva e-posten omhandler."
    
     result << other
   end 
 
   #SPECIAL CHARS
-  if subject =~ /[\@\$\^\%\&\~\*]/
+  if subject.to_s =~ /[\@\$\^\%\&\~\*]/
     other = Hash.new
     other[:word] = "Spesialtegn (@#$^%&~*)"
     other[:status] = "warning"
@@ -75,7 +95,7 @@ post "/" do
     result << other
   end
 
-  if subject =~ /[\#\*]/
+  if subject.to_s =~ /[\#\*]/
     other = Hash.new
     other[:word] = "# (Hashtag)"
     other[:status] = "warning"
@@ -85,7 +105,7 @@ post "/" do
   end
 
   #CATASTROF
-  if subject =~ /^(Re:|Fwd:|fw:|Reminder:)/i
+  if subject.to_s =~ /^(Re:|Fwd:|fw:|Reminder:)/i
     other = Hash.new
     other[:word] = "Sikker kilde (re:, fwd:)"
     other[:status] = "danger"
@@ -95,7 +115,7 @@ post "/" do
   end
 
   #EXCLAMATION RULE
-  if subject =~ /\!{1,}/
+  if subject.to_s =~ /\!{1,}/
     other = Hash.new
     other[:word] = "Utropstegn"
     other[:status] = "danger"
@@ -107,7 +127,7 @@ post "/" do
   end
 
   #CAPS RULE
-  if subject =~ /[A-Z]{3,}?/
+  if subject.to_s =~ /[A-Z]{3,}?/
     other = Hash.new
     other[:word] = "CAPS LOCK"
     other[:status] = "danger"
@@ -117,7 +137,7 @@ post "/" do
   end
 
   #PERCENTAGE RULE
-  if subject =~ /[0-9]{0,2}%/
+  if subject.to_i =~ /[0-9]{0,2}%/
     other = Hash.new
     other[:word] = "0-100%"
     other[:status] = "warning"
@@ -127,7 +147,7 @@ post "/" do
   end
 
   #PERCENTAGE RULE
-  if subject == "Kort innholdsbeskrivelse her"
+  if subject.to_s == "Kort innholdsbeskrivelse her"
     other = Hash.new
     other[:word] = "Kort innholdsbeskrivelse her"
     other[:status] = "warning"
@@ -137,7 +157,7 @@ post "/" do
   end
 
   #KR RULE
-  if subject =~ /((?:kr)(?:\.)?(?:\s)?(?:\.)?(?:[0-9]+))|([0-9]+(?:\s)?(?:kr))|[0-9]+(?=\,)/
+  if subject.to_s =~ /((?:kr)(?:\.)?(?:\s)?(?:\.)?(?:[0-9]+))|([0-9]+(?:\s)?(?:kr))|[0-9]+(?=\,)/
     other = Hash.new
     other[:word] = "0-1.000.000 kr"
     other[:status] = "warning"
@@ -176,7 +196,7 @@ post "/" do
     other = Hash.new
     other[:word] = subject
     other[:status] = "warning"
-    other[:comment] = "Emne er være avgjørende for om mailen åpnes eller ikke. Gi en mer detaljert beskrivelse om hva mailen omhandler."
+    other[:comment] = "Teksten er være avgjørende for om e-posten åpnes eller ikke. Gi en mer detaljert beskrivelse om hva e-posten omhandler."
    
     result << other
   end
