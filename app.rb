@@ -185,7 +185,7 @@ post "/" do
    
   if type != 'unicode' 
     other[:word] = "Tekst inneholder ikke noen emojis"
-    other[:status] = "info-circle blue"
+    other[:status] = "info-circle analyzer-blue"
     other[:comment] = "Det er fordelaktig for åpningsraten å benytte emoijs i teksten."
 
     result << other
