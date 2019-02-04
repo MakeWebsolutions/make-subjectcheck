@@ -3,7 +3,9 @@
 require 'bundler'
 require 'json'
 require 'sinatra/cross_origin'
-require './register.rb'
+require "httparty"
+require "./emoji"
+require './register'
 
 Bundler.require
 
@@ -37,6 +39,16 @@ post "/" do
   content_type :json
   params = JSON.parse(request.body.read)
 
+  #Error property doesnt exist
+  unless params.has_key?("subject")
+    return { :error => "Missing subject property" }.to_json
+  end
+
+  #Error message is empty
+  unless params["subject"].length.to_i > 0
+    return { :error => "empty message" }.to_json
+  end
+
   subject = params['subject']
   result = []
   status = "Good"
@@ -48,7 +60,7 @@ post "/" do
   #LENGTH RULE
   if subject.size.to_i > 50 
     other = Hash.new
-    other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn)"
+    other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn). Din tekst inneholder " + subject.size.to_s + " tegn."
     other[:status] = "warning"
     other[:comment] = "Vurder og kort ned teksten til rundt 50 tegn."
 
@@ -162,6 +174,19 @@ post "/" do
     other[:word] = "0-1.000.000 kr"
     other[:status] = "warning"
     other[:comment] = "Økt spamfare. Unngå å kombinere disse med tilsvarende advarsler."
+
+    result << other
+  end
+
+  #CHECK IF STRING CONTAIN EMOJI
+  message = Message.new
+  type    = message.get_type(subject)
+  other = Hash.new
+   
+  if type != 'unicode' 
+    other[:word] = "Tekst inneholder ikke noen emojis"
+    other[:status] = "info"
+    other[:comment] = "Det er fordelaktig for åpningsraten å benytte emoijs i teksten."
 
     result << other
   end
