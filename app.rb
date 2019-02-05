@@ -73,7 +73,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Teksten bør bestå av 5 - 7 ord. Dette er litt for kort."
+    other[:comment] = "Teksten bør bestå av 5 - 7 ord. (Din tekst inneholder " + words.length.to_s + " ord)."
    
     result << other
   end
