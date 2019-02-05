@@ -73,7 +73,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Teksten bør bestå av 5 - 7 ord. (Din tekst inneholder " + words.length.to_s + " ord)."
+    other[:comment] = "Teksten bør bestå av 5 - 7 ord."
    
     result << other
   end
@@ -82,7 +82,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Teksten bør bestå av 5 - 7 ord. (Din tekst inneholder " + words.length.to_s + " ord)."
+    other[:comment] = "Teksten bør bestå av 5 - 7 ord."
    
     result << other
   end
@@ -102,7 +102,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Spesialtegn (@#$^%&~*)"
     other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Økt spamfare. Ikke bruk dem hvis du absolutt ikke må."
+    other[:comment] = "Økt spamfare. Ikke bruk spesialtegn hvis du absolutt ikke må."
 
     result << other
   end
