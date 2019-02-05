@@ -180,8 +180,8 @@ post "/" do
 
   if subject.include? "webversjon"
     other = Hash.new
-    other[:word] = "Preheader"
-    other[:status] = "exclamation-triangle analyzer-orange"
+    other[:word] = "Standardtekst"
+    other[:status] = "times-circle analyzer-red"
     other[:comment] = "Bruk preheader til å beskrive innholdet i e-posten."
 
     result << other
