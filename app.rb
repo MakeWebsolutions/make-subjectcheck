@@ -178,13 +178,20 @@ post "/" do
     result << other
   end
 
+  if subject.include? "webversjon"
+    other = Hash.new
+    other[:word] = "Preheader"
+    other[:status] = "exclamation-triangle analyzer-orange"
+    other[:comment] = "Bruk preheader til å beskrive innholdet i e-posten."
+
+    result << other
+  end
+
   #CHECK IF STRING CONTAIN EMOJI
   message = Message.new
   type    = message.get_type(subject)
   other = Hash.new
 
-  puts type
-   
   if type.to_s != 'unicode' 
     other[:word] = "Tekst inneholder ikke noen emojis"
     other[:status] = "info-circle analyzer-blue"
