@@ -49,13 +49,13 @@ post "/" do
     return { :error => "empty message" }.to_json
   end
 
-  subject = params['subject']
+  subject = params['subject'].to_s.downcase
   result = []
   status = "Good"
 
   #CLEAN STRING
-  subject.gsub!(/\-/, ' ')
-  subject.gsub!(/\"/, '')
+  #subject.gsub!(/\-/, ' ')
+  #subject.gsub!(/\"/, '')
  
   #LENGTH RULE
   if subject.size.to_i > 50 
@@ -98,7 +98,7 @@ post "/" do
   end 
 
   #SPECIAL CHARS
-  if subject.to_s =~ /[\@\$\^\%\&\~\*]/
+  if subject.to_s =~ /[\@\$\^\%\&\~\*\[\]\|\{\}]/
     other = Hash.new
     other[:word] = "Spesialtegn (@#$^%&~*)"
     other[:status] = "exclamation-triangle analyzer-orange"
@@ -119,7 +119,7 @@ post "/" do
   #CATASTROF
   if subject.to_s =~ /^(Re:|Fwd:|fw:|Reminder:)/i
     other = Hash.new
-    other[:word] = "Sikker kilde (re:, fwd:)"
+    other[:word] = "Sikker kilde (Re:, Fwd:, Fw:, Reminder:)"
     other[:status] = "times-circle analyzer-red"
     other[:comment] = "Økt spamfare. Ikke utgi deg for å være en sikker kilde. La SPF og DKIM gjøre den jobben."
 

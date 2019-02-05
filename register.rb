@@ -80,9 +80,7 @@ module Register
     { word: "lånetilbud", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     
     #MISC
-    { word: "øl", plural: false, comment: "Ja takk!", state: "success" },
-    { word: "Øl", plural: false, comment: "Ja takk!", state: "success" },
-    { word: "Rinnan", plural: false, comment: "Det er er vel fortsatt ikke innafor...", state: "times-circle analyzer-red" },
+    { word: "øl", plural: false, comment: "Ja takk!", state: "thumbs-o-up analyzer-green" },
     { word: "rinnan", plural: false, comment: "Det er er vel fortsatt ikke innafor...", state: "times-circle analyzer-red" },
     { word: "faktura", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info-circle analyzer-blue" },
     { word: "forfalt", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info-circle analyzer-blue" },
@@ -108,12 +106,14 @@ module Register
     { word: "pille", plural: false, comment: "Hvis du ikke kjenner til dette bør du lese deg opp.", state: "times-circle analyzer-red" },
 
     #GENERAL
-    { word: "Nyhetsbrev", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
+    { word: "nyhetsbrev", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
     { word: "nyhetsmail", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
     { word: "newsmail", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
     { word: "månadsbrev", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
-    { word: "Nyhetsbrevet", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
+    { word: "nyhetsbrevet", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
+    { word: "newsletter", plural: false, comment: "Unngå å fortelle at et nyhetsbrev er et nyhetsbrev. Gi en mer detaljert beskrivelse om hva e-posten omhandler.", state: "exclamation-triangle analyzer-orange" },
     
+
     #PROMISES
     { word: "fantastisk", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "kaboom", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
