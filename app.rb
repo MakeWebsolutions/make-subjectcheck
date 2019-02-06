@@ -199,9 +199,9 @@ post "/" do
     other = Hash.new
 
     if type.to_s != 'unicode' 
-      other[:word] = "Emne inneholder ikke emoijs"
+      other[:word] = "Emnet inneholder ikke emoijs"
       other[:status] = "info-circle analyzer-blue"
-      other[:comment] = "Det kan være fordelaktig for åpningsraten å benytte emoijs i emnet."
+      other[:comment] = "Det kan være fordelaktig for åpningsraten å bruke emoijs."
 
       result << other
     end
