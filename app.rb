@@ -37,19 +37,24 @@ end
 
 post "/" do 
   content_type :json
-  params = JSON.parse(request.body.read)
 
-  #Error property doesnt exist
-  unless params.has_key?("subject")
+  #READ REQ BODY
+  body = JSON.parse(request.body.read)
+
+  #HOLDS PREHEADER REQUEST
+  preheader = params[:type]
+
+ #Error property doesnt exist
+  unless body.has_key?("subject")
     return { :error => "Missing subject property" }.to_json
   end
 
   #Error message is empty
-  unless params["subject"].length.to_i > 0
+  unless body["subject"].length.to_i > 0
     return { :error => "empty message" }.to_json
   end
 
-  subject = params['subject'].to_s.downcase
+  subject = body['subject'].to_s.downcase
   result = []
   status = "Good"
 
@@ -188,16 +193,18 @@ post "/" do
   end
 
   #CHECK IF STRING CONTAIN EMOJI
-  message = Message.new
-  type    = message.get_type(subject)
-  other = Hash.new
+  if !preheader
+    message = Message.new
+    type    = message.get_type(subject)
+    other = Hash.new
 
-  if type.to_s != 'unicode' 
-    other[:word] = "Emoij"
-    other[:status] = "info-circle analyzer-blue"
-    other[:comment] = "Det kan være fordelaktig for åpningsraten å benytte emoijs i teksten."
+    if type.to_s != 'unicode' 
+      other[:word] = "Emoij"
+      other[:status] = "info-circle analyzer-blue"
+      other[:comment] = "Det kan være fordelaktig for åpningsraten å benytte emoijs i teksten."
 
-    result << other
+      result << other
+    end
   end
 
   subject = subject.downcase
