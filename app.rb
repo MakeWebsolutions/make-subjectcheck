@@ -90,7 +90,7 @@ post "/" do
   #MIN LENGTH RULE
   if subject.size.to_i <= 10
     other = Hash.new
-    other[:word] = "Lengden er for kort"
+    other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
     other[:comment] = "Teksten er avgjørende for om e-posten åpnes eller ikke. Gi en mer detaljert beskrivelse om hva e-posten omhandler."
    
@@ -193,9 +193,9 @@ post "/" do
   other = Hash.new
 
   if type.to_s != 'unicode' 
-    other[:word] = "Tekst inneholder ikke noen emojis"
+    other[:word] = "Emoij"
     other[:status] = "info-circle analyzer-blue"
-    other[:comment] = "Det er fordelaktig for åpningsraten å benytte emoijs i teksten."
+    other[:comment] = "Det kan være fordelaktig for åpningsraten å benytte emoijs i teksten."
 
     result << other
   end

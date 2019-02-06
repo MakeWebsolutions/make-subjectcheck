@@ -81,6 +81,7 @@ module Register
     
     #MISC
     { word: "øl", plural: false, comment: "Ja takk!", state: "thumbs-o-up analyzer-green" },
+    { word: "cognac", plural: false, comment: "Prøv Bache Gabrielsen", state: "thumbs-o-up analyzer-green" },
     { word: "rinnan", plural: false, comment: "Det er er vel fortsatt ikke innafor...", state: "times-circle analyzer-red" },
     { word: "faktura", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info-circle analyzer-blue" },
     { word: "forfalt", plural: false, comment: "Et ord som vanligvis ikke forbindes med høy åpningsrate. Vurder omformulering.", state: "info-circle analyzer-blue" },
