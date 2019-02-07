@@ -183,7 +183,7 @@ post "/" do
     result << other
   end
 
-  if subject.include? "webversjon"
+  if subject.to_s =~ /^Se webversjon/
     other = Hash.new
     other[:word] = "Standardtekst"
     other[:status] = "times-circle analyzer-red"
