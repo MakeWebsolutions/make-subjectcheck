@@ -95,7 +95,7 @@ post "/" do
   #MIN LENGTH RULE
   if subject.size.to_i <= 10
     other = Hash.new
-    other[:word] = "Antall ord"
+    other[:word] = "Antall tegn"
     other[:status] = "exclamation-triangle analyzer-orange"
     other[:comment] = "Teksten er avgjørende for om e-posten åpnes eller ikke. Gi en mer detaljert beskrivelse om hva e-posten omhandler."
    
