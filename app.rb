@@ -112,7 +112,7 @@ post "/" do
     result << other
   end
 
-  if subject.to_s =~ /[\#\*]/
+  if subject.to_s =~ /#/
     other = Hash.new
     other[:word] = "# (Hashtag)"
     other[:status] = "exclamation-triangle analyzer-orange"
@@ -154,7 +154,7 @@ post "/" do
   end
 
   #PERCENTAGE RULE
-  if subject.to_i =~ /[0-9]{0,2}%/
+  if subject.to_i =~ /[0-9]{0,3}%/
     other = Hash.new
     other[:word] = "0-100%"
     other[:status] = "exclamation-triangle analyzer-orange"
