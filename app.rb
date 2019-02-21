@@ -78,7 +78,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Teksten bør bestå av 5 - 7 ord."
+    other[:comment] = "Teksten bør bestå av 5 - 8 ord."
    
     result << other
   end
@@ -87,7 +87,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Teksten bør bestå av 5 - 7 ord."
+    other[:comment] = "Teksten bør bestå av 5 - 8 ord (pga åpning på mobil)."
    
     result << other
   end
@@ -144,7 +144,7 @@ post "/" do
   end
 
   #CAPS RULE
-  if subject.to_s =~ /[A-Z]{3,}?/
+  if subject.to_s =~ /[A-Z]{2,}?/
     other = Hash.new
     other[:word] = "CAPS LOCK"
     other[:status] = "times-circle analyzer-red"
