@@ -73,8 +73,9 @@ post "/" do
   end
 
   #COUNT WORDS
-  words = subject.to_s.split(' ')
-  if words.length < 5
+  words = subject.to_s.split(" ")
+
+  if words.length.to_i < 5
     other = Hash.new
     other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
