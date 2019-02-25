@@ -84,7 +84,7 @@ post "/" do
     result << other
   end
 
-  if words.length.to_i > 7
+  if words.length.to_i >= 9
     other = Hash.new
     other[:word] = "Antall ord"
     other[:status] = "exclamation-triangle analyzer-orange"
