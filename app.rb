@@ -54,13 +54,25 @@ post "/" do
     return { :error => "empty message" }.to_json
   end
 
-  subject = body['subject'].to_s.downcase
+  subject = body['subject']
   result = []
   status = "Good"
 
   #CLEAN STRING
   #subject.gsub!(/\-/, ' ')
   #subject.gsub!(/\"/, '')
+
+   #CAPS RULE
+  if subject.to_s =~ /[A-Z]{2,}?/
+    other = Hash.new
+    other[:word] = "CAPS LOCK"
+    other[:status] = "times-circle analyzer-red"
+    other[:comment] = "Oppfattes som skrikende og spamete. Bruk kun stor bokstav i starten av setninger (Viktig)."
+
+    result << other
+  end
+
+  subject = subject.to_s.downcase
  
   #LENGTH RULE
   if subject.size.to_i > 50 
@@ -140,16 +152,6 @@ post "/" do
     other[:comment] = "Oppfattes som skrikende og spamete. Bruk av utropstegn virker mot sin hensikt."
 
     subject.gsub!(/[\!]+/, '')
-
-    result << other
-  end
-
-  #CAPS RULE
-  if subject.to_s =~ /[A-Z]{2,}?/
-    other = Hash.new
-    other[:word] = "CAPS LOCK"
-    other[:status] = "times-circle analyzer-red"
-    other[:comment] = "Oppfattes som skrikende og spamete. Bruk kun stor bokstav i starten av setninger."
 
     result << other
   end
