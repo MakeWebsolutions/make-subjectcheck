@@ -75,34 +75,36 @@ post "/" do
   subject = subject.to_s.downcase
  
   #LENGTH RULE
-  if subject.size.to_i > 50 
-    other = Hash.new
-    other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn). Din tekst inneholder " + subject.size.to_s + " tegn."
-    other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Vurder og kort ned teksten til rundt 50 tegn."
+  if !preheader
+    if subject.size.to_i > 50 
+      other = Hash.new
+      other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn). Din tekst inneholder " + subject.size.to_s + " tegn."
+      other[:status] = "exclamation-triangle analyzer-orange"
+      other[:comment] = "Vurder og kort ned teksten til rundt 50 tegn."
 
-    result << other
-  end
+      result << other
+    end
 
-  #COUNT WORDS
-  words = subject.to_s.split(" ")
+    #COUNT WORDS
+    words = subject.to_s.split(" ")
 
-  if words.length.to_i < 5
-    other = Hash.new
-    other[:word] = "Antall ord"
-    other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Teksten bør bestå av 5 - 8 ord."
-   
-    result << other
-  end
+    if words.length.to_i < 5
+      other = Hash.new
+      other[:word] = "Antall ord"
+      other[:status] = "exclamation-triangle analyzer-orange"
+      other[:comment] = "Teksten bør bestå av 5 - 8 ord."
+     
+      result << other
+    end
 
-  if words.length.to_i >= 9
-    other = Hash.new
-    other[:word] = "Antall ord"
-    other[:status] = "exclamation-triangle analyzer-orange"
-    other[:comment] = "Teksten bør bestå av 5 - 8 ord (pga åpning på mobil)."
-   
-    result << other
+    if words.length.to_i >= 9
+      other = Hash.new
+      other[:word] = "Antall ord"
+      other[:status] = "exclamation-triangle analyzer-orange"
+      other[:comment] = "Teksten bør bestå av 5 - 8 ord."
+     
+      result << other
+    end
   end
 
   #MIN LENGTH RULE
@@ -134,8 +136,9 @@ post "/" do
     result << other
   end
 
+  puts subject.to_s
   #CATASTROF
-  if subject.to_s =~ /^(Re:|Fwd:|fw:|Reminder:)/i
+  if subject.to_s =~ /^(re\:?|fwd\:?|fw\:?|reminder\:?)/i
     other = Hash.new
     other[:word] = "Sikker kilde (Re:, Fwd:, Fw:, Reminder:)"
     other[:status] = "times-circle analyzer-red"
@@ -186,7 +189,7 @@ post "/" do
     result << other
   end
 
-  if subject.to_s =~ /^Se webversjon/
+  if subject.to_s =~ /^se\swebversjon/
     other = Hash.new
     other[:word] = "Standardtekst"
     other[:status] = "times-circle analyzer-red"
@@ -222,11 +225,11 @@ post "/" do
         if word =~ /#{regEx}/
           ha = Hash.new
           
-          if bad[:plural]
-            ha['word'] = bad[:word] + ", " + bad[:word] + "e, " + bad[:word] + "er, " + bad[:word] + "ere"
-          else 
+          #if bad[:plural]
+           # ha['word'] = bad[:word] + ", " + bad[:word] + ", n" + bad[:word] + "r, " + bad[:word] + "ne"
+          #else 
             ha['word'] = bad[:word]
-          end
+          #end
 
           ha[:status] = bad[:state]
           ha['comment'] = bad[:comment]
