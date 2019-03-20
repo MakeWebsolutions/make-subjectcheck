@@ -199,7 +199,7 @@ post "/" do
     result << other
   end
 
-  #FIRST 50 CHARS CONTAIN PREHEADER
+  #FIRST 50 CHARS CONTAIN SE WEBVERSJON
   if preheader
     if subject.slice(0,50) =~ /se\swebversjon/
       other = Hash.new
@@ -210,6 +210,12 @@ post "/" do
       result << other
     end
   end
+
+  #ADD RULES FOR MAILCHIMP, MAILMOJO AND APSIS HERE
+
+  ##################################################
+  # RULES #
+  ##################################################
 
   #CHECK IF STRING CONTAIN EMOJI
   if !preheader
