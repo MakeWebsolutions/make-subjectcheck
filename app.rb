@@ -205,7 +205,7 @@ post "/" do
       other = Hash.new
       other[:word] = "Preheader"
       other[:status] = "times-circle analyzer-red"
-      other[:comment] = "Lag preheader så lang at Se \"webversjon\" forsvinner fra teksten."
+      other[:comment] = "Lag preheader så lang at Se \"webversjon\" forsvinner fra den synlige teksten."
 
       result << other
     end
