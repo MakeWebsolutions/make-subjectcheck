@@ -76,11 +76,11 @@ post "/" do
  
   #LENGTH RULE
   if !preheader
-    if subject.size.to_i > 50 
+    if subject.size.to_i > 60 
       other = Hash.new
-      other[:word] = "Lengde (" + subject.size.to_s + " tegn > 50 tegn). Din tekst inneholder " + subject.size.to_s + " tegn."
+      other[:word] = "Lengde. Din tekst inneholder " + subject.size.to_s + " tegn."
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Vurder og kort ned teksten til rundt 50 tegn."
+      other[:comment] = "Vurder og kort ned teksten til 50 tegn eller mindre"
 
       result << other
     end
@@ -207,7 +207,7 @@ post "/" do
     if type.to_s != 'unicode' 
       other[:word] = "Emnet inneholder ikke emoijs"
       other[:status] = "info-circle analyzer-blue"
-      other[:comment] = "Det kan være fordelaktig for åpningsraten å bruke emoijs."
+      other[:comment] = "Flere eposter åpnes hvis det brukes emoijs i emnefeltet."
 
       result << other
     end
