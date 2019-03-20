@@ -127,6 +127,7 @@ post "/" do
     result << other
   end
 
+  #MARKED HASTAG AS OLD
   if subject.to_s =~ /#/
     other = Hash.new
     other[:word] = "# (Hashtag)"
@@ -136,7 +137,6 @@ post "/" do
     result << other
   end
 
-  puts subject.to_s
   #CATASTROF
   if subject.to_s =~ /^(re\:?|fwd\:?|fw\:?|reminder\:?)/i
     other = Hash.new
@@ -189,6 +189,7 @@ post "/" do
     result << other
   end
 
+  #PREHEADER STARTS WITH SE WEBVERSJON
   if subject.to_s =~ /^se\swebversjon/
     other = Hash.new
     other[:word] = "Standardtekst"
@@ -196,6 +197,18 @@ post "/" do
     other[:comment] = "Bruk preheader til å beskrive innholdet i e-posten."
 
     result << other
+  end
+
+  #FIRST 50 CHARS CONTAIN PREHEADER
+  if preheader
+    if subject.slice(0,50) =~ /se\swebversjon/
+      other = Hash.new
+      other[:word] = "Preheader"
+      other[:status] = "times-circle analyzer-red"
+      other[:comment] = "Din preheader er litt i korteste laget."
+
+      result << other
+    end
   end
 
   #CHECK IF STRING CONTAIN EMOJI
