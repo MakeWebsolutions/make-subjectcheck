@@ -204,7 +204,7 @@ post "/" do
     if subject.slice(0,50) =~ /se\swebversjon/
       other = Hash.new
       other[:word] = "Preheader"
-      other[:status] = "times-circle analyzer-red"
+      other[:status] = "exclamation-triangle analyzer-orange"
       other[:comment] = "Lag preheader så lang at Se \"webversjon\" forsvinner fra den synlige teksten."
 
       result << other
