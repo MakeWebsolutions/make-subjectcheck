@@ -224,9 +224,9 @@ post "/" do
     other = Hash.new
 
     if type.to_s != 'unicode' 
-      other[:word] = "Emnet inneholder ikke emoijs"
+      other[:word] = "😃"
       other[:status] = "info-circle analyzer-blue"
-      other[:comment] = "Flere eposter åpnes hvis det brukes emoijs i emnefeltet."
+      other[:comment] = "Flere eposter åpnes hvis det brukes emoijs i emnefeltet. "
 
       result << other
     end
