@@ -205,7 +205,7 @@ post "/" do
       other = Hash.new
       other[:word] = "Preheader"
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Lag preheader så lang at Se \"webversjon\" forsvinner fra den synlige teksten."
+      other[:comment] = "Lag preheader så lang at \"Se webversjon\" forsvinner fra den synlige teksten."
 
       result << other
     end
