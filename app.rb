@@ -190,7 +190,7 @@ post "/" do
   end
 
   #PREHEADER STARTS WITH SE WEBVERSJON
-  if subject.to_s =~ /^se\swebversjon/
+  if subject.to_s =~ /^se\swebversjon/ || subject.to_s =~ /^sjå\swebversjon/ || subject.to_s =~ /^view\swebversion/
     other = Hash.new
     other[:word] = "Standardtekst"
     other[:status] = "times-circle analyzer-red"
@@ -201,11 +201,11 @@ post "/" do
 
   #FIRST 50 CHARS CONTAIN SE WEBVERSJON
   if preheader
-    if subject.slice(0,50) =~ /se\swebversjon/
+    if subject.slice(0,50) =~ /se\swebversjon/ || subject.slice(0,50) =~ /sjå\swebversjon/ || subject.slice(0,50) =~ /view\swebversion/
       other = Hash.new
       other[:word] = "Preheader"
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Lag preheader så lang at \"Se webversjon\" forsvinner fra den synlige teksten."
+      other[:comment] = "Preheader bør være rundt 50 tegn."
 
       result << other
     end
