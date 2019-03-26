@@ -190,7 +190,7 @@ post "/" do
   end
 
   #PREHEADER STARTS WITH SE WEBVERSJON
-  if subject.to_s =~ /^se\swebversjon/ || subject.to_s =~ /^sjå\swebversjon/ || subject.to_s =~ /^view\swebversion/
+  if subject.to_s =~ /^se\swebversjon/ || subject.to_s =~ /^sjå\swebversjon/ || subject.to_s =~ /^view\swebversion/ || subject.to_s =~ /^läs\spå\swebben/ || subject.to_s =~ /^se\swebversion/
     other = Hash.new
     other[:word] = "Standardtekst"
     other[:status] = "times-circle analyzer-red"
@@ -201,7 +201,7 @@ post "/" do
 
   #FIRST 50 CHARS CONTAIN SE WEBVERSJON
   if preheader
-    if subject.slice(0,50) =~ /se\swebversjon/ || subject.slice(0,50) =~ /sjå\swebversjon/ || subject.slice(0,50) =~ /view\swebversion/
+    if subject.slice(0,50) =~ /se\swebversjon/ || subject.slice(0,50) =~ /sjå\swebversjon/ || subject.slice(0,50) =~ /view\swebversion/ || subject.to_s =~ /läs\spå\swebben/ || subject.to_s =~ /se\swebversion/
       other = Hash.new
       other[:word] = "Preheader"
       other[:status] = "exclamation-triangle analyzer-orange"
@@ -211,7 +211,7 @@ post "/" do
     end
   end
 
-  #ADD RULES FOR MAILCHIMP, MAILMOJO AND APSIS HERE
+  #ADD RULES FOR MAILCHIMP, MAILMOJO AND APSIS PREHEADERS HERE
 
   ##################################################
   # RULES #
