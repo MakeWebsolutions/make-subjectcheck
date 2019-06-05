@@ -88,23 +88,23 @@ post "/" do
     #COUNT WORDS
     words = subject.to_s.split(" ")
 
-    #if words.length.to_i < 5
-    #  other = Hash.new
-    #  other[:word] = "Antall ord"
-    #  other[:status] = "exclamation-triangle analyzer-orange"
-    #  other[:comment] = "Teksten bør bestå av 5 - 8 ord."
-    # 
-    #  result << other
-    #end
-#
-    #if words.length.to_i >= 9
-    #  other = Hash.new
-    #  other[:word] = "Antall ord"
-    #  other[:status] = "exclamation-triangle analyzer-orange"
-    #  other[:comment] = "Teksten bør bestå av 5 - 8 ord."
-    # 
-    #  result << other
-    #end
+    if words.length.to_i < 5
+      other = Hash.new
+      other[:word] = "Antall ord"
+      other[:status] = "exclamation-triangle analyzer-orange"
+      other[:comment] = "Teksten bør bestå av 5 - 8 ord."
+     
+      result << other
+    end
+
+    if words.length.to_i >= 9
+      other = Hash.new
+      other[:word] = "Antall ord"
+      other[:status] = "exclamation-triangle analyzer-orange"
+      other[:comment] = "Teksten bør bestå av 5 - 8 ord."
+     
+      result << other
+    end
   end
 
   #MIN LENGTH RULE
@@ -138,7 +138,7 @@ post "/" do
   end
 
   #CATASTROF
-  if subject.to_s =~ /^(re\:?|fwd\:?|fw\:?|reminder\:?)/i
+  if subject.to_s =~ /(re\:?|fwd\:?|fw\:?|reminder\:?)/i
     other = Hash.new
     other[:word] = "Sikker kilde (Re:, Fwd:, Fw:, Reminder:)"
     other[:status] = "times-circle analyzer-red"
