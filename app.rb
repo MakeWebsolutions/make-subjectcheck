@@ -88,6 +88,8 @@ post "/" do
     #COUNT WORDS
     words = subject.to_s.split(" ")
 
+    puts words[0]
+
     if words.length.to_i < 5
       other = Hash.new
       other[:word] = "Antall ord"
@@ -142,7 +144,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Sikker kilde (Re:, Fwd:, Fw:, Reminder:)"
     other[:status] = "times-circle analyzer-red"
-    other[:comment] = "Økt spamfare. Ikke utgi deg for å være en sikker kilde. La SPF og DKIM gjøre den jobben."
+    other[:comment] = "Økt spamfare. Ikke utgi deg for å være en sikker kilde."
 
     result << other
   end
