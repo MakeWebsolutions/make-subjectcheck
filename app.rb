@@ -140,7 +140,7 @@ post "/" do
   end
 
   #CATASTROF
-  if subject.to_s =~ /(re\:?|fwd\:?|fw\:?|reminder\:?)/i
+  if subject.to_s =~ /(re\s?\:|fwd\s?\:|fw\s?\:|reminder\s?\:)/i
     other = Hash.new
     other[:word] = "Sikker kilde (Re:, Fwd:, Fw:, Reminder:)"
     other[:status] = "times-circle analyzer-red"
