@@ -88,8 +88,6 @@ post "/" do
     #COUNT WORDS
     words = subject.to_s.split(" ")
 
-    puts words[0]
-
     if words.length.to_i < 5
       other = Hash.new
       other[:word] = "Antall ord"

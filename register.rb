@@ -3,11 +3,13 @@ module Register
     
     #LOTTO
    
-    { word: "velkomstgave", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "salg", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "sale", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "gave", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "tilbudsdag", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "velkomstgave", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "kjempetilbud", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "gavekort", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
-    { word: "gave", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "påskekampanje", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "megakampanje", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "forhandlerkampanje", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
@@ -37,6 +39,7 @@ module Register
     { word: "kunngjøring", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "vekt", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "hast", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "poker", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "vikig", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "gull", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "knallgode", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
@@ -54,9 +57,7 @@ module Register
     { word: "trekning", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "avslag", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "lotto", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
-    { word: "salg", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
-    { word: "sale", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
-
+    
     
     #TEST
     { word: "test", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
@@ -65,8 +66,10 @@ module Register
     { word: "dolor", plural: false, comment: "Forbindes med tester og kan fort ende opp i søppelkassen.", state: "exclamation-triangle analyzer-orange" },
     
     #LÅN OG FINANS
-   
     { word: "penger", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "gjeld", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "business", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "donasjon", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "kapital", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "luksus", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "lånetilbud", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
@@ -79,18 +82,23 @@ module Register
     { word: "inntekt", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "bankkonto", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "konto", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "betal", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "betaling", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "betalingskort", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "betalingskortet", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "betale", plural: true, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "finansiering", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "finansieringen", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "refinansiering", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "refinansiere", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "refinansier", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "kredittid", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "info-circle analyzer-blue" },
     { word: "gebyr", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "info-circle analyzer-blue" },
-   
     { word: "kreditt", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "info-circle analyzer-blue" },
     { word: "no-reply", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "info-circle analyzer-blue" },
     { word: "noreply", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "info-circle analyzer-blue" },
+    { word: "smågjeld", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "bitcoin", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     
     #MISC
     { word: "øl", plural: false, comment: "Ja takk!", state: "thumbs-o-up analyzer-green" },
@@ -129,11 +137,13 @@ module Register
 
     #PROMISES
     { word: "fantastisk", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "uslåelig", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "legitimasjon", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "garanti", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "varsel", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "ekstrem", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "extrem", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+    { word: "spesial", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "kaboom", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "gratulerer", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "congrats", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
@@ -145,6 +155,8 @@ module Register
     { word: "eksklusive", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "beste", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
     { word: "vip", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
+
+    { word: "viktig", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
 
     #NIGERIA
     { word: "hjelp", plural: true, comment: "Økt spamfare. Kan forstås som Nigeria/svindel mail.", state: "exclamation-triangle analyzer-orange" },
