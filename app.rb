@@ -80,7 +80,7 @@ post "/" do
       other = Hash.new
       other[:word] = "Lengde. Din tekst inneholder " + subject.size.to_s + " tegn."
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Vurder og kort ned teksten til 50 tegn eller mindre"
+      other[:comment] = "Teksten vil bli kuttet på mobil."
 
       result << other
     end
@@ -194,7 +194,7 @@ post "/" do
     other = Hash.new
     other[:word] = "Standardtekst"
     other[:status] = "times-circle analyzer-red"
-    other[:comment] = "Bruk preheader til å beskrive innholdet i e-posten."
+    other[:comment] = "Du bør legge til en preheader."
 
     result << other
   end
@@ -205,7 +205,7 @@ post "/" do
       other = Hash.new
       other[:word] = "Preheader"
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Preheader bør være rundt 50 tegn."
+      other[:comment] = "Preheaderen er litt kort."
 
       result << other
     end
@@ -226,7 +226,7 @@ post "/" do
     if type.to_s != 'unicode' 
       other[:word] = "😃"
       other[:status] = "info-circle analyzer-blue"
-      other[:comment] = "Flere eposter åpnes hvis det brukes emoijs i emnefeltet. "
+      other[:comment] = "Vurder og frisk opp emnetfeltet med emoijs. "
 
       result << other
     end
