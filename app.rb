@@ -224,9 +224,9 @@ post "/" do
     other = Hash.new
 
     if type.to_s != 'unicode' 
-      other[:word] = "😃"
+      other[:word] = ""
       other[:status] = "info-circle analyzer-blue"
-      other[:comment] = "Vurder og frisk opp emnetfeltet med emoijs. "
+      other[:comment] = "Vurder og frisk opp emnetfeltet med emoijs 😃😃😃"
 
       result << other
     end
