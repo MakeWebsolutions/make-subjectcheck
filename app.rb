@@ -6,6 +6,7 @@ require 'sinatra/cross_origin'
 require "httparty"
 require "./emoji"
 require './register'
+require './powerwords'
 
 Bundler.require
 
@@ -244,13 +245,8 @@ post "/" do
         if word =~ /#{regEx}/
           ha = Hash.new
           
-          #if bad[:plural]
-           # ha['word'] = bad[:word] + ", " + bad[:word] + ", n" + bad[:word] + "r, " + bad[:word] + "ne"
-          #else 
-            ha['word'] = bad[:word]
-          #end
-
-          ha[:status] = bad[:state]
+          ha['word'] = bad[:word]
+          ha['status'] = bad[:state]
           ha['comment'] = bad[:comment]
 
           result << ha
@@ -265,6 +261,22 @@ post "/" do
     other[:comment] = "Teksten er være avgjørende for om e-posten åpnes eller ikke. Gi en mer detaljert beskrivelse om hva e-posten omhandler."
    
     result << other
+  end
+
+  if arr.size > 0 
+    arr.each { | word | 
+      Powerwords::KNOWN.each do | powerword |
+        if powerword[:word].to_s == word.to_s
+          ha = Hash.new
+          ha['word'] = powerword[:word]
+          ha['status'] = powerword[:state]
+          ha['comment'] = powerword[:comment]
+
+          result << ha
+          break
+        end
+      end
+    }
   end
 
   if result.size == 0

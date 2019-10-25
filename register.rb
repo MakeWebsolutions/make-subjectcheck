@@ -180,6 +180,7 @@ module Register
     { word: "viktig", plural: false, comment: "Økt spamfare. Unngå for mange av disse advarslene i kombinasjon.", state: "exclamation-triangle analyzer-orange" },
 
     #NIGERIA
-    { word: "hjelp", plural: true, comment: "Økt spamfare. Kan forstås som Nigeria/svindel mail.", state: "exclamation-triangle analyzer-orange" },
+    { word: "hjelp", plural: true, comment: "Økt spamfare. Kan forstås som Nigeria/svindel mail.", state: "exclamation-triangle analyzer-orange" }   
+
   ]
 end
