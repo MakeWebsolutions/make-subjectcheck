@@ -239,7 +239,7 @@ pre {
   color:#fff;
 }
 
-.btn-info { background-color:#0086BF;border-color:#0086BF;}
+.btn-info, .btn-info:hover, .btn-info:active, .btn-info:focus { background-color:#0086BF;border-color:#0086BF;}
 
 .modal {
   display:block;
