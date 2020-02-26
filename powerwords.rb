@@ -43,7 +43,6 @@ module Powerwords
     { word: "hack", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "farlig", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "bløff", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
-    { word: "holocaust", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "forferdelig", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "orkan", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "skummel", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
@@ -345,6 +344,7 @@ module Powerwords
     { word: "unike", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "slippe løs", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "frigjøre", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
+    { word: "frigjørende", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "seier", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "seire", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" },
     { word: "vinne", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" }, 
@@ -392,6 +392,7 @@ module Powerwords
     { word: "betingelsesløs", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" }, 
     { word: "veldig", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" }, 
     { word: "verdensklasse", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" }, 
+    { word: "risiko", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" }, 
     { word: "utforsket", plural: false, comment: "Ord med høy emosjonell faktor.", state: "thumbs-o-up analyzer-green" }
 ]
 

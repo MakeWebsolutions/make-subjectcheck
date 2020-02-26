@@ -9,7 +9,7 @@
 
 body {
 	background: #ffffff;
-	padding-top: 145px;
+	padding-top: 60px;
 	font-weight: 200;
 	font-size:16px;
 	font-family: 'Lato', sans-serif;
@@ -169,8 +169,8 @@ pre {
 }
 
 .alert {
-	padding: 8px 10px;
-	margin-bottom: 10px;
+	padding: 4px 10px;
+	margin-bottom: 0;
 	position:relative;
 }
 
@@ -183,6 +183,11 @@ pre {
 	padding: 2px 8px;
 	margin-right: 5px;
 }
+
+.analyzer-blue { color:#00a5ea;}
+.analyzer-orange { color: #f4a200;}
+.analyzer-green { color:#009736; }
+
 
 .subject { 
 	padding-left: 10px;
