@@ -81,7 +81,7 @@ post "/" do
       other = Hash.new
       other[:word] = "Lengde. Din tekst inneholder " + subject.size.to_s + " tegn."
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Teksten vil bli kuttet på mobil."
+      other[:comment] = "Vær oppmerksom på at teksten vil bli kuttet på mobil"
 
       result << other
     end
@@ -93,7 +93,7 @@ post "/" do
       other = Hash.new
       other[:word] = "Antall ord"
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Teksten bør bestå av 5 - 8 ord."
+      other[:comment] = "Du kan godt bruke flere ord og ta litt mer plass."
      
       result << other
     end
@@ -102,7 +102,7 @@ post "/" do
       other = Hash.new
       other[:word] = "Antall ord"
       other[:status] = "exclamation-triangle analyzer-orange"
-      other[:comment] = "Teksten bør bestå av 5 - 8 ord."
+      other[:comment] = "Vær oppmerksom på at teksten vil bli kuttet på mobil"
      
       result << other
     end
