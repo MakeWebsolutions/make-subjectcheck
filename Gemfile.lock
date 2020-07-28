@@ -3,7 +3,7 @@ GEM
   specs:
     httparty (0.15.5)
       multi_xml (>= 0.5.2)
-    json (2.0.3)
+    json (2.3.0)
     multi_xml (0.6.0)
     rack (1.6.5)
     rack-protection (1.5.3)
